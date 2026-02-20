@@ -135,7 +135,7 @@ const MissionSection = () => {
 
           .feature-grid {
             grid-template-columns: 1fr !important;
-            gap: 0 !important;
+            // gap: 0 !important;
             margin-bottom: 32px !important;
           }
 
@@ -271,7 +271,7 @@ const MissionSection = () => {
               borderBottomRightRadius:"80px",
               boxShadow:"0 20px 56px rgba(0,0,0,0.13)",
             }}>
-              <img src="/rideone.png" alt="" style={{ width:"100%", height:"100%", objectFit:"cover" }} />
+              <img src="/07.png" alt="" style={{ width:"100%", height:"100%", objectFit:"cover" }} />
               <div style={{ position:"absolute", inset:0, background:"linear-gradient(315deg,rgba(140,198,63,0.08) 0%,transparent 60%)" }} />
             </div>
 

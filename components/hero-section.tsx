@@ -9,8 +9,8 @@ import { useState, useEffect } from "react";
 
 const AtherBanner = ({
   // Replace these placeholder URLs with your actual image paths
-  bike450Src   = "/45000.png",      // ← put your Ather 450 image in public folder
-  bikeRiztaSrc = "/rixtanew.png",    // ← put your Ather Rizta image in public folder
+  bike450Src   = "/05.png",      // ← put your Ather 450 image in public folder
+  bikeRiztaSrc = "/03.png",    // ← put your Ather Rizta image in public folder
 }) => {
   const [loaded, setLoaded]       = useState(false);
   const [activeTab, setActiveTab] = useState(0);

@@ -1,5 +1,6 @@
 import React from "react";
 import { FaMapMarkerAlt, FaPhoneAlt, FaWhatsapp } from "react-icons/fa";
+import Link from "next/link";
 
 const ContactUs = () => {
   return (
@@ -63,6 +64,7 @@ const ContactUs = () => {
           position: relative;
           overflow: hidden;
           white-space: nowrap;
+          text-decoration: none;
         }
         .btn-confirm::after {
           content: '';
@@ -90,6 +92,15 @@ const ContactUs = () => {
           position: absolute; inset: 0;
           background: linear-gradient(135deg, rgba(255,255,255,0.2) 0%, transparent 60%);
         }
+        .contact-card {
+          text-align: center;
+          max-width: 240px;
+          cursor: pointer;
+          transition: transform 0.3s ease;
+          text-decoration: none;
+          display: block;
+        }
+        .contact-card:hover { transform: translateY(-4px); }
         .contact-card:hover .contact-icon-box {
           transform: translateY(-3px);
           box-shadow: 0 10px 28px rgba(140,198,63,0.4);
@@ -143,12 +154,6 @@ const ContactUs = () => {
 
           .contact-divider {
             display: none !important;
-          }
-
-          .contact-live-badge {
-            top: 12px !important;
-            right: 12px !important;
-            padding: 4px 10px !important;
           }
 
           .contact-footer {
@@ -280,53 +285,55 @@ const ContactUs = () => {
           </p>
 
           {/* ── Form grid ── */}
-          <div className="contact-form-grid" style={{ display:"grid", gridTemplateColumns:"1fr 1fr", gap:"20px", marginBottom:"28px", textAlign:"left" }}>
+          <form action="/api/submit-test-ride" method="POST">
+            <div className="contact-form-grid" style={{ display:"grid", gridTemplateColumns:"1fr 1fr", gap:"20px", marginBottom:"28px", textAlign:"left" }}>
 
-            <div className="contact-form-field">
-              <label className="ride-label">Full Name</label>
-              <input type="text" placeholder="Enter your full name" className="ride-input" />
+              <div className="contact-form-field">
+                <label className="ride-label" htmlFor="fullName">Full Name</label>
+                <input type="text" id="fullName" name="fullName" placeholder="Enter your full name" className="ride-input" required />
+              </div>
+
+              <div className="contact-form-field">
+                <label className="ride-label" htmlFor="mobile">Mobile Number</label>
+                <input type="tel" id="mobile" name="mobile" placeholder="Enter mobile number" className="ride-input" required />
+              </div>
+
+              <div className="contact-form-field">
+                <label className="ride-label" htmlFor="model">Model Interested In</label>
+                <select id="model" name="model" className="ride-input ride-select" required>
+                  <option value="ather-450">Ather 450</option>
+                  <option value="ather-rizta">Ather Rizta</option>
+                </select>
+              </div>
+
+              <div className="contact-form-field">
+                <label className="ride-label" htmlFor="datetime">Preferred Date &amp; Time</label>
+                <input type="datetime-local" id="datetime" name="datetime" className="ride-input" required />
+              </div>
+
+              {/* Full-width landmark field */}
+              <div style={{ gridColumn: "1 / -1" }}>
+                <label className="ride-label" htmlFor="landmark">Location / Landmark <span style={{ fontWeight:400, textTransform:"none", letterSpacing:0, color:"#aaa" }}>(optional)</span></label>
+                <input type="text" id="landmark" name="landmark" placeholder="Enter nearby landmark" className="ride-input" />
+              </div>
+
             </div>
 
-            <div className="contact-form-field">
-              <label className="ride-label">Mobile Number</label>
-              <input type="tel" placeholder="Enter mobile number" className="ride-input" />
+            {/* ── Submit button ── */}
+            <div style={{ display:"flex", flexDirection:"column", alignItems:"center", gap:"14px" }}>
+              <button type="submit" className="btn-confirm">
+                Confirm My Test Ride
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
+                  <path d="M5 12h14M12 5l7 7-7 7"/>
+                </svg>
+              </button>
+
+              <p className="contact-agreement" style={{ fontSize:"12px", color:"#aaa", maxWidth:480, lineHeight:1.7 }}>
+                By submitting, you agree to receive calls/WhatsApp updates regarding
+                test rides, pricing &amp; delivery.
+              </p>
             </div>
-
-            <div className="contact-form-field">
-              <label className="ride-label">Model Interested In</label>
-              <select className="ride-input ride-select">
-                <option>Ather 450</option>
-                <option>Ather Rizta</option>
-              </select>
-            </div>
-
-            <div className="contact-form-field">
-              <label className="ride-label">Preferred Date &amp; Time</label>
-              <input type="datetime-local" className="ride-input" />
-            </div>
-
-            {/* Full-width landmark field */}
-            <div style={{ gridColumn: "1 / -1" }}>
-              <label className="ride-label">Location / Landmark <span style={{ fontWeight:400, textTransform:"none", letterSpacing:0, color:"#aaa" }}>(optional)</span></label>
-              <input type="text" placeholder="Enter nearby landmark" className="ride-input" />
-            </div>
-
-          </div>
-
-          {/* ── Submit button ── */}
-          <div style={{ display:"flex", flexDirection:"column", alignItems:"center", gap:"14px" }}>
-            <button className="btn-confirm">
-              Confirm My Test Ride
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
-                <path d="M5 12h14M12 5l7 7-7 7"/>
-              </svg>
-            </button>
-
-            <p className="contact-agreement" style={{ fontSize:"12px", color:"#aaa", maxWidth:480, lineHeight:1.7 }}>
-              By submitting, you agree to receive calls/WhatsApp updates regarding
-              test rides, pricing &amp; delivery.
-            </p>
-          </div>
+          </form>
 
         </div>
       </div>
@@ -352,10 +359,8 @@ const ContactUs = () => {
         <div style={{ position:"absolute", top:-60, right:-60, width:220, height:220, borderRadius:"50%", background:"rgba(140,198,63,0.08)", filter:"blur(48px)", pointerEvents:"none" }} />
         <div style={{ position:"absolute", bottom:-40, left:-40, width:180, height:180, borderRadius:"50%", background:"rgba(140,198,63,0.06)", filter:"blur(36px)", pointerEvents:"none" }} />
 
-        {/* ── Location ── */}
-        <div className="contact-card" style={{ textAlign:"center", maxWidth:240, cursor:"default", transition:"transform 0.3s ease" }}
-          onMouseEnter={e => (e.currentTarget.style.transform="translateY(-4px)")}
-          onMouseLeave={e => (e.currentTarget.style.transform="translateY(0)")}>
+        {/* ── Location (non-clickable) ── */}
+        <div className="contact-card" style={{ cursor: "default" }}>
           <div className="contact-icon-box"><FaMapMarkerAlt /></div>
           <h4 style={{ fontSize:"11px", fontWeight:800, letterSpacing:"0.16em", textTransform:"uppercase", color:"#8cc63f", margin:"0 0 10px" }}>
             Showroom Location
@@ -370,31 +375,27 @@ const ContactUs = () => {
         {/* Thin vertical dividers */}
         <div className="contact-divider" style={{ width:1, background:"rgba(140,198,63,0.18)", alignSelf:"stretch", display:"block" }} />
 
-        {/* ── Phone ── */}
-        <div className="contact-card" style={{ textAlign:"center", maxWidth:200, cursor:"default", transition:"transform 0.3s ease" }}
-          onMouseEnter={e => (e.currentTarget.style.transform="translateY(-4px)")}
-          onMouseLeave={e => (e.currentTarget.style.transform="translateY(0)")}>
+        {/* ── Phone (clickable) ── */}
+        <a href="tel:+919876543210" className="contact-card" style={{ maxWidth:200 }}>
           <div className="contact-icon-box"><FaPhoneAlt /></div>
           <h4 style={{ fontSize:"11px", fontWeight:800, letterSpacing:"0.16em", textTransform:"uppercase", color:"#8cc63f", margin:"0 0 10px" }}>
             Call Us
           </h4>
           <p className="contact-phone" style={{ fontSize:"15px", fontWeight:800, color:"#fff", margin:"0 0 4px" }}>+91 98765 43210</p>
           <p className="contact-hours" style={{ fontSize:"12px", color:"rgba(255,255,255,0.45)", margin:0, letterSpacing:"0.06em" }}>9 AM – 8 PM, All Days</p>
-        </div>
+        </a>
 
         <div className="contact-divider" style={{ width:1, background:"rgba(140,198,63,0.18)", alignSelf:"stretch", display:"block" }} />
 
-        {/* ── WhatsApp ── */}
-        <div className="contact-card" style={{ textAlign:"center", maxWidth:200, cursor:"default", transition:"transform 0.3s ease" }}
-          onMouseEnter={e => (e.currentTarget.style.transform="translateY(-4px)")}
-          onMouseLeave={e => (e.currentTarget.style.transform="translateY(0)")}>
+        {/* ── WhatsApp (clickable) ── */}
+        <a href="https://wa.me/919876543210" target="_blank" rel="noopener noreferrer" className="contact-card" style={{ maxWidth:200 }}>
           <div className="contact-icon-box"><FaWhatsapp /></div>
           <h4 style={{ fontSize:"11px", fontWeight:800, letterSpacing:"0.16em", textTransform:"uppercase", color:"#8cc63f", margin:"0 0 10px" }}>
             WhatsApp
           </h4>
           <p className="contact-phone" style={{ fontSize:"15px", fontWeight:800, color:"#fff", margin:"0 0 4px" }}>+91 98765 43210</p>
           <p className="contact-hours" style={{ fontSize:"12px", color:"rgba(255,255,255,0.45)", margin:0, letterSpacing:"0.06em" }}>Instant Support</p>
-        </div>
+        </a>
 
       </div>
 

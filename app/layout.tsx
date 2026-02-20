@@ -10,9 +10,9 @@ const outfit = Outfit({
 })
 
 export const metadata: Metadata = {
-  title: "ISMO Clinic, Chennai",
+  title: "Ather in Medavakkam",
   description:
-    "Regrow Thicker,Fuller Hair atISMO Clinic, Chennai",
+    "Meet Your Next Electric Ride",
   generator: 'Nextjs15',
   icons: {
     icon: [

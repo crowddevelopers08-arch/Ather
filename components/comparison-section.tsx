@@ -203,6 +203,7 @@ const IntroSmartz = () => {
           .badge-tag {
             font-size: 10px !important;
             padding: 3px 12px !important;
+            margin-top: 20px !important;
           }
 
           .glow-blob {
@@ -278,7 +279,7 @@ const IntroSmartz = () => {
             </div>
 
             {/* RIGHT IMAGE */}
-            <div className="intro-image desktop-img-hide" style={{ display: "flex", justifyContent: "flex-end", alignItems: "center", position: "relative" }}>
+            <div className="intro-image desktop-img-hide" style={{ display: "flex", justifyContent: "center", alignItems: "center", position: "relative" }}>
               {/* Soft glow blob */}
               <div className="glow-blob" style={{
                 position: "absolute", right: "5%", top: "50%", transform: "translateY(-50%)",
