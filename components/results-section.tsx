@@ -258,7 +258,7 @@ const MissionSection = () => {
               borderTopLeftRadius:"80px",
               boxShadow:"0 20px 56px rgba(0,0,0,0.13)",
             }}>
-              <img src="/ridetwo.png" alt="" style={{ width:"100%", height:"100%", objectFit:"cover" }} />
+              <img src="/0222.png" alt="" style={{ width:"100%", height:"100%", objectFit:"cover" }} />
               {/* Green tint overlay */}
               <div style={{ position:"absolute", inset:0, background:"linear-gradient(135deg,rgba(140,198,63,0.08) 0%,transparent 60%)" }} />
             </div>

@@ -163,7 +163,7 @@ const AtherBanner = ({
     {/* Right: Live indicator + CTA */}
     <div style={{ display: "flex", alignItems: "center", gap: "20px" }}>
       {/* Live store badge */}
-      <div className="hero-nav-badge" style={{ display: "flex", alignItems: "center", gap: "7px",
+      {/* <div className="hero-nav-badge" style={{ display: "flex", alignItems: "center", gap: "7px",
         background: "rgba(140,198,63,0.1)", border: "1px solid rgba(140,198,63,0.25)",
         padding: "5px 14px", borderRadius: "100px" }}>
         <div style={{
@@ -173,7 +173,7 @@ const AtherBanner = ({
         <span style={{ fontSize: "12px", fontWeight: "700", color: "#3a7d0a", letterSpacing: "0.06em" }}>
           Store Open
         </span>
-      </div>
+      </div> */}
       
       {/* Book Test Ride anchor */}
       <a href="#form" style={{ textDecoration: "none" }}>

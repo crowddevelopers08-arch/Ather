@@ -425,11 +425,11 @@ const EScooterAdvantages = () => {
                   pointerEvents: "none",
                 }} />
                 <img
-                  src="/charging.png"
+                  src="/08.png"
                   alt="E-scooter service support"
                   className="service-center-image"
                   style={{
-                    width: "100%", maxWidth: 340, height: 340,
+                    width: "300px", maxWidth: 400, height: 340,
                     borderRadius: "16px",
                     objectFit: "cover",
                     display: "block",
