@@ -1,0 +1,58 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model Lead {
+  id              String        @id @default(cuid())
+  name            String
+  phone           String
+  email           String?
+  // ISMO specific fields
+  treatment       String?       // QR 678, GFC, PRP, etc.
+  concern         String?       // Hair fall, Bald patches, Thinning, etc.
+  preferredDateTime String?     // User's preferred appointment time
+  source          String?       @default("https://www.ismoskinclinicchennai.in/")
+  formName        String?       @default("Hair Consultation Form")
+  consent         Boolean       @default(true)
+  
+  // TeleCRM integration fields
+  telecrmSynced   Boolean       @default(false)
+  telecrmId       String?
+  telecrmError    String?
+  
+  // Lead management
+  status          LeadStatus    @default(NEW)
+  priority        LeadPriority  @default(MEDIUM)
+  
+  // Timestamps
+  createdAt       DateTime      @default(now())
+  updatedAt       DateTime      @updatedAt
+  syncedAt        DateTime?
+
+  @@index([phone])
+  @@index([email])
+  @@index([status])
+  @@index([createdAt])
+  @@map("leads")
+}
+
+enum LeadStatus {
+  NEW
+  CONTACTED
+  SCHEDULED
+  CONVERTED
+  LOST
+  INVALID
+}
+
+enum LeadPriority {
+  LOW
+  MEDIUM
+  HIGH
+  URGENT
+}
