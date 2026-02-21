@@ -214,10 +214,10 @@ const IntroSmartz = () => {
       `}</style>
 
       {/* ═══════════════════ ATHER 450 ═══════════════════ */}
-      {/* Flow: white hero → warm left-to-right green tint */}
+      {/* Flow: white hero → warm left-to-right orange tint */}
       <section style={{
         width: "100%",
-        background: "linear-gradient(135deg, #ffffff 0%, #f2f8e8 45%, #e8f2d8 100%)",
+        background: "linear-gradient(135deg, #ffffff 0%, #fff0e8 45%, #ffe1d8 100%)",
         borderTop: "1px solid rgba(238,83,53,0.15)",
         borderBottom: "1px solid rgba(238,83,53,0.12)",
         paddingTop: "0px",
@@ -295,10 +295,10 @@ const IntroSmartz = () => {
       </section>
 
       {/* ═══════════════════ ATHER RIZTA ═══════════════════ */}
-      {/* Flow: flipped gradient — dark green tint on left fading to white on right */}
+      {/* Flow: flipped gradient — dark orange tint on left fading to white on right */}
       <section style={{
         width: "100%",
-        background: "linear-gradient(135deg, #e4f0d4 0%, #f0f8e6 40%, #ffffff 100%)",
+        background: "linear-gradient(135deg, #ffe1d8 0%, #fff0e8 40%, #ffffff 100%)",
         borderBottom: "1px solid rgba(238,83,53,0.15)",
         paddingTop: "72px",
         paddingBottom: "0px",
@@ -368,7 +368,7 @@ const IntroSmartz = () => {
 
           </div>
 
-          {/* Bottom accent line — mirrors the top of section 1, completing the green flow */}
+          {/* Bottom accent line — mirrors the top of section 1, completing the orange flow */}
           <div className="accent-line-bottom" style={{ height: "3px", background: "linear-gradient(90deg, transparent, #ee5335 30%, #ee5335 70%, transparent)", marginTop: "56px" }} />
         </div>
       </section>
