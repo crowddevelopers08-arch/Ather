@@ -72,7 +72,7 @@ const FooterAther = () => {
         .btn-footer-cta {
           display: inline-flex; align-items: center; gap: 10px;
           padding: 13px 32px;
-          background: #ee5335; color: #000000;
+          background: #ee5335; color: white;
           font-weight: 900; font-size: 12px;
           letter-spacing: 0.1em; text-transform: uppercase;
           border: none; cursor: pointer; font-family: inherit;
@@ -432,7 +432,7 @@ const FooterAther = () => {
           <a href="#form" style={{ textDecoration: "none" }}>
             <button className="btn-footer-cta" style={{ width:"100%", justifyContent:"center" }}>
               Book Test Ride
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#000000" strokeWidth="2.5">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="2.5">
                 <path d="M5 12h14M12 5l7 7-7 7"/>
               </svg>
             </button>

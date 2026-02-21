@@ -10,7 +10,7 @@ const IntroSmartz = () => {
           gap: 10px;
           padding: 14px 32px;
           background: #ee5335;
-          color: #000;
+          color: white;
           font-weight: 800;
           font-size: 13px;
           letter-spacing: 0.08em;
@@ -83,7 +83,7 @@ const IntroSmartz = () => {
           display: inline-block;
           padding: 4px 14px;
           background: #ee5335;
-          color: #000;
+          color: white;
           font-size: 11px;
           font-weight: 800;
           letter-spacing: 0.14em;

@@ -102,7 +102,7 @@ const EScooterAdvantages = () => {
           gap: 12px;
           padding: 16px 44px;
           background: #ee5335;
-          color: #000;
+          color: white;
           font-weight: 800;
           font-size: 14px;
           letter-spacing: 0.09em;
@@ -410,7 +410,7 @@ const EScooterAdvantages = () => {
             {/* CENTER image */}
             <div className="service-center-col" style={{ display: "flex", justifyContent: "center", alignItems: "center", flexShrink: 0 }}>
               {/* Glow ring */}
-              <div style={{ position: "relative" }}>
+              <div style={{ position: "relative",}}>
                 <div className="service-glow-ring" style={{
                   position: "absolute", inset: -20, borderRadius: "20px",
                   background: "radial-gradient(circle, rgba(238,83,53,0.18) 0%, transparent 70%)",
