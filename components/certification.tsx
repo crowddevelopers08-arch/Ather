@@ -28,7 +28,7 @@ const FooterAther = () => {
     <footer style={{
       width: "100%",
       background: "#000000",
-      borderTop: "1px solid #8cc63f",
+      borderTop: "1px solid #ee5335",
       fontFamily: "'Outfit', sans-serif",
       position: "relative",
       overflow: "hidden",
@@ -45,14 +45,14 @@ const FooterAther = () => {
           text-decoration: none;
         }
         .footer-link-row:last-child { border-bottom: none; }
-        .footer-link-row:hover .fl-label { color: #8cc63f; }
-        .footer-link-row:hover .fl-arrow { transform: translateX(4px); color: #8cc63f; }
+        .footer-link-row:hover .fl-label { color: #ee5335; }
+        .footer-link-row:hover .fl-arrow { transform: translateX(4px); color: #ee5335; }
 
         /* ── Social icon buttons ── */
         .social-btn {
           width: 42px; height: 42px;
           background: rgba(255,255,255,0.05);
-          border: 1px solid #8cc63f;
+          border: 1px solid #ee5335;
           display: flex; align-items: center; justify-content: center;
           font-size: 16px; color: #ffffff;
           cursor: pointer;
@@ -61,18 +61,18 @@ const FooterAther = () => {
           text-decoration: none;
         }
         .social-btn:hover {
-          background: #8cc63f;
-          border-color: #8cc63f;
+          background: #ee5335;
+          border-color: #ee5335;
           color: #000000;
           transform: translateY(-2px);
-          box-shadow: 0 6px 20px rgba(140,198,63,0.35);
+          box-shadow: 0 6px 20px rgba(238,83,53,0.35);
         }
 
         /* ── Test Ride CTA ── */
         .btn-footer-cta {
           display: inline-flex; align-items: center; gap: 10px;
           padding: 13px 32px;
-          background: #8cc63f; color: #000000;
+          background: #ee5335; color: #000000;
           font-weight: 900; font-size: 12px;
           letter-spacing: 0.1em; text-transform: uppercase;
           border: none; cursor: pointer; font-family: inherit;
@@ -87,7 +87,7 @@ const FooterAther = () => {
           background: linear-gradient(120deg, transparent 0%, rgba(255,255,255,0.2) 50%, transparent 100%);
           transform: translateX(-100%); transition: transform 0.4s ease;
         }
-        .btn-footer-cta:hover { background: #7db535; transform:translateY(-2px); box-shadow:0 8px 24px rgba(140,198,63,0.38); }
+        .btn-footer-cta:hover { background: #cc4020; transform:translateY(-2px); box-shadow:0 8px 24px rgba(238,83,53,0.38); }
         .btn-footer-cta:hover::after { transform:translateX(100%); }
 
         /* ── Contact links ── */
@@ -99,7 +99,7 @@ const FooterAther = () => {
           transition: all 0.2s ease;
         }
         .contact-link:hover span:first-of-type {
-          color: #8cc63f;
+          color: #ee5335;
         }
 
         @keyframes dot-beat { 0%,100%{opacity:1;transform:scale(1)} 50%{opacity:0.4;transform:scale(0.6)} }
@@ -264,12 +264,12 @@ const FooterAther = () => {
       {/* Top accent line */}
       <div style={{
         position: "absolute", top: 0, left: 0, right: 0, height: "3px",
-        background: "#8cc63f",
+        background: "#ee5335",
       }} />
 
       {/* Background glow blobs */}
-      <div style={{ position:"absolute", top:-80, right:-80, width:320, height:320, borderRadius:"50%", background:"rgba(140,198,63,0.05)", pointerEvents:"none" }} />
-      <div style={{ position:"absolute", bottom:-60, left:-60, width:260, height:260, borderRadius:"50%", background:"rgba(140,198,63,0.04)", pointerEvents:"none" }} />
+      <div style={{ position:"absolute", top:-80, right:-80, width:320, height:320, borderRadius:"50%", background:"rgba(238,83,53,0.05)", pointerEvents:"none" }} />
+      <div style={{ position:"absolute", bottom:-60, left:-60, width:260, height:260, borderRadius:"50%", background:"rgba(238,83,53,0.04)", pointerEvents:"none" }} />
 
       {/* ═══════════ MAIN FOOTER BODY ═══════════ */}
       <div className="footer-container" style={{
@@ -304,7 +304,7 @@ const FooterAther = () => {
 
           {/* Address block */}
           <div className="footer-address" style={{ display:"flex", gap:"12px", marginBottom:"28px" }}>
-            <FaMapMarkerAlt style={{ color:"#8cc63f", fontSize:15, flexShrink:0, marginTop:3 }} />
+            <FaMapMarkerAlt style={{ color:"#ee5335", fontSize:15, flexShrink:0, marginTop:3 }} />
             <p style={{ fontSize:"13px", color:"rgba(255,255,255,0.5)", lineHeight:1.75, margin:0 }}>
               Velachery Main Road, Near Jayachandra,<br/>
               Jayachandran Nagar, Medavakkam,<br/>
@@ -323,7 +323,7 @@ const FooterAther = () => {
                 target={href.startsWith('http') ? "_blank" : undefined}
                 rel={href.startsWith('http') ? "noopener noreferrer" : undefined}
               >
-                <span style={{ color:"#8cc63f", fontSize:13 }}>{icon}</span>
+                <span style={{ color:"#ee5335", fontSize:13 }}>{icon}</span>
                 <div>
                   <span style={{ fontSize:"14px", fontWeight:700, color:"#ffffff" }}>{text}</span>
                   <span style={{ fontSize:"11px", color:"rgba(255,255,255,0.35)", marginLeft:8 }}>{sub}</span>
@@ -354,10 +354,10 @@ const FooterAther = () => {
         <div>
           {/* Section label */}
           <div className="footer-section-label" style={{ display:"flex", alignItems:"center", gap:"10px", marginBottom:"28px" }}>
-            <div style={{ width:20, height:2, background:"#8cc63f", borderRadius:2 }} />
+            <div style={{ width:20, height:2, background:"#ee5335", borderRadius:2 }} />
             <span style={{
               fontSize:"11px", fontWeight:800, letterSpacing:"0.16em",
-              textTransform:"uppercase", color:"#8cc63f",
+              textTransform:"uppercase", color:"#ee5335",
             }}>Quick Links</span>
           </div>
 
@@ -374,14 +374,14 @@ const FooterAther = () => {
                 {/* Angular tick */}
                 <div style={{
                   width:18, height:18, flexShrink:0,
-                  background: hoveredLink === label ? "#8cc63f" : "rgba(140,198,63,0.15)",
-                  border: "1px solid #8cc63f",
+                  background: hoveredLink === label ? "#ee5335" : "rgba(238,83,53,0.15)",
+                  border: "1px solid #ee5335",
                   display:"flex", alignItems:"center", justifyContent:"center",
                   clipPath:"polygon(4px 0%,100% 0%,calc(100% - 4px) 100%,0% 100%)",
                   transition:"background 0.2s ease",
                 }}>
                   <svg width="8" height="8" viewBox="0 0 12 12" fill="none">
-                    <path d="M2 6l3 3 5-5" stroke={hoveredLink === label ? "#000000" : "#8cc63f"} strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                    <path d="M2 6l3 3 5-5" stroke={hoveredLink === label ? "#000000" : "#ee5335"} strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
                   </svg>
                 </div>
                 <div style={{ flex:1 }}>
@@ -399,30 +399,30 @@ const FooterAther = () => {
         {/* ── COL 3: Live status + CTA ── */}
         <div>
           <div className="footer-section-label" style={{ display:"flex", alignItems:"center", gap:"10px", marginBottom:"28px" }}>
-            <div style={{ width:20, height:2, background:"#8cc63f", borderRadius:2 }} />
+            <div style={{ width:20, height:2, background:"#ee5335", borderRadius:2 }} />
             <span style={{
               fontSize:"11px", fontWeight:800, letterSpacing:"0.16em",
-              textTransform:"uppercase", color:"#8cc63f",
+              textTransform:"uppercase", color:"#ee5335",
             }}>Visit Us</span>
           </div>
 
           {/* Live status card */}
           <div className="footer-live-card" style={{
-            background:"rgba(140,198,63,0.06)",
-            border:"1px solid #8cc63f",
+            background:"rgba(238,83,53,0.06)",
+            border:"1px solid #ee5335",
             borderRadius:4,
             padding:"24px 20px",
             marginBottom:"24px",
             position:"relative", overflow:"hidden",
           }}>
-            <div style={{ position:"absolute", inset:0, background:"linear-gradient(135deg,rgba(140,198,63,0.05) 0%,transparent 60%)", pointerEvents:"none" }} />
+            <div style={{ position:"absolute", inset:0, background:"linear-gradient(135deg,rgba(238,83,53,0.05) 0%,transparent 60%)", pointerEvents:"none" }} />
             <div style={{ display:"flex", alignItems:"center", gap:"8px", marginBottom:"10px" }}>
-              <div className="live-dot" style={{ width:8, height:8, borderRadius:"50%", background:"#8cc63f" }} />
-              <span style={{ fontSize:"12px", fontWeight:800, color:"#8cc63f", letterSpacing:"0.08em", textTransform:"uppercase" }}>Open Now</span>
+              <div className="live-dot" style={{ width:8, height:8, borderRadius:"50%", background:"#ee5335" }} />
+              <span style={{ fontSize:"12px", fontWeight:800, color:"#ee5335", letterSpacing:"0.08em", textTransform:"uppercase" }}>Open Now</span>
             </div>
             <p style={{ margin:"0 0 4px", fontSize:"18px", fontWeight:900, color:"#ffffff" }}>Mon – Sun</p>
             <p style={{ margin:"0 0 16px", fontSize:"14px", color:"rgba(255,255,255,0.5)" }}>9:00 AM – 8:00 PM</p>
-            <div style={{ height:1, background:"rgba(140,198,63,0.15)", marginBottom:16 }} />
+            <div style={{ height:1, background:"rgba(238,83,53,0.15)", marginBottom:16 }} />
             <p style={{ margin:0, fontSize:"12px", color:"rgba(255,255,255,0.4)", lineHeight:1.65 }}>
               Walk in or call ahead to book your slot. Our Ather experts are ready to guide you.
             </p>
@@ -443,7 +443,7 @@ const FooterAther = () => {
 
       {/* ═══════════ BOTTOM BAR ═══════════ */}
       <div className="footer-bottom-bar" style={{
-        borderTop: "1px solid #8cc63f",
+        borderTop: "1px solid #ee5335",
         padding: "18px 48px",
         maxWidth: "1300px", margin: "0 auto",
         display: "flex", alignItems: "center", justifyContent: "space-between",
@@ -461,7 +461,7 @@ const FooterAther = () => {
               fontSize:"12px", color:"rgba(255,255,255,0.3)", cursor:"pointer",
               transition:"color 0.18s ease", letterSpacing:"0.04em",
             }}
-              onMouseEnter={e => (e.currentTarget.style.color="#8cc63f")}
+              onMouseEnter={e => (e.currentTarget.style.color="#ee5335")}
               onMouseLeave={e => (e.currentTarget.style.color="rgba(255,255,255,0.3)")}
             >Privacy Policy</span>
           </Link>
@@ -469,8 +469,8 @@ const FooterAther = () => {
 
         {/* Green accent dashes */}
         <div style={{ display:"flex", alignItems:"center", gap:4 }}>
-          <div style={{ width:16, height:2, background:"#8cc63f", borderRadius:2 }} />
-          <div style={{ width:8, height:2, background:"#8cc63f", opacity:0.5, borderRadius:2 }} />
+          <div style={{ width:16, height:2, background:"#ee5335", borderRadius:2 }} />
+          <div style={{ width:8, height:2, background:"#ee5335", opacity:0.5, borderRadius:2 }} />
         </div>
       </div>
 

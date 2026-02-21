@@ -22,19 +22,19 @@ const ThankNavbar = () => {
         }
         .nav-link::after {
           content:''; position:absolute; bottom:-2px; left:0; width:0; height:2px;
-          background:#8cc63f; transition:width 0.25s ease;
+          background:#ee5335; transition:width 0.25s ease;
         }
-        .nav-link:hover { color:#3a7d0a; }
+        .nav-link:hover { color:#ee5335; }
         .nav-link:hover::after { width:100%; }
 
         .btn-nav {
-          background:#8cc63f; color:#000; border:none; padding:9px 24px;
+          background:#ee5335; color:#000; border:none; padding:9px 24px;
           font-family:'Outfit', sans-serif; font-weight:800; font-size:13px;
           letter-spacing:0.08em; text-transform:uppercase; cursor:pointer;
           clip-path:polygon(10px 0%,100% 0%,calc(100% - 10px) 100%,0% 100%);
           transition:all 0.2s ease;
         }
-        .btn-nav:hover { background:#7db535; transform:translateY(-1px); box-shadow:0 6px 20px rgba(140,198,63,0.35); }
+        .btn-nav:hover { background:#cc4020; transform:translateY(-1px); box-shadow:0 6px 20px rgba(238,83,53,0.35); }
 
         @keyframes dotPulse { 0%,100%{opacity:1;transform:scale(1)} 50%{opacity:0.4;transform:scale(0.6)} }
         @keyframes slideDown{ from{transform:translateY(-100%);opacity:0} to{transform:translateY(0);opacity:1} }
@@ -53,7 +53,7 @@ const ThankNavbar = () => {
         position: "fixed", top: 0, left: 0, right: 0, zIndex: 100,
         background: navScrolled ? "rgba(255,255,255,0.97)" : "rgba(255,255,255,0.85)",
         backdropFilter: "blur(14px)",
-        borderBottom: `1px solid ${navScrolled ? "rgba(140,198,63,0.25)" : "rgba(140,198,63,0.12)"}`,
+        borderBottom: `1px solid ${navScrolled ? "rgba(238,83,53,0.25)" : "rgba(238,83,53,0.12)"}`,
         boxShadow: navScrolled ? "0 4px 28px rgba(0,0,0,0.08)" : "none",
         transition: "all 0.3s ease",
         animation: "slideDown 0.6s ease forwards",
@@ -82,14 +82,14 @@ const ThankNavbar = () => {
             {/* Live store badge */}
             <div className="nav-badge" style={{ 
               display: "flex", alignItems: "center", gap: "7px",
-              background: "rgba(140,198,63,0.1)", border: "1px solid rgba(140,198,63,0.25)",
+              background: "rgba(238,83,53,0.1)", border: "1px solid rgba(238,83,53,0.25)",
               padding: "5px 14px", borderRadius: "100px" 
             }}>
               <div style={{
-                width: "7px", height: "7px", borderRadius: "50%", background: "#8cc63f",
+                width: "7px", height: "7px", borderRadius: "50%", background: "#ee5335",
                 animation: "dotPulse 1.6s ease-in-out infinite",
               }} />
-              <span style={{ fontSize: "12px", fontWeight: "700", color: "#3a7d0a", letterSpacing: "0.06em", fontFamily: "'Outfit', sans-serif" }}>
+              <span style={{ fontSize: "12px", fontWeight: "700", color: "#ee5335", letterSpacing: "0.06em", fontFamily: "'Outfit', sans-serif" }}>
                 Store Open
               </span>
             </div>

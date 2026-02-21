@@ -77,7 +77,7 @@ const EScooterAdvantages = () => {
         /* ── Feature icon box ── */
         .icon-box {
           width: 52px; height: 52px;
-          background: #8cc63f;
+          background: #ee5335;
           display: flex; align-items: center; justify-content: center;
           flex-shrink: 0;
           clip-path: polygon(10px 0%, 100% 0%, calc(100% - 10px) 100%, 0% 100%);
@@ -92,7 +92,7 @@ const EScooterAdvantages = () => {
         }
         .icon-box:hover {
           transform: translateY(-2px);
-          box-shadow: 0 8px 24px rgba(140,198,63,0.4);
+          box-shadow: 0 8px 24px rgba(238,83,53,0.4);
         }
 
         /* ── Primary CTA button ── */
@@ -101,7 +101,7 @@ const EScooterAdvantages = () => {
           align-items: center;
           gap: 12px;
           padding: 16px 44px;
-          background: #8cc63f;
+          background: #ee5335;
           color: #000;
           font-weight: 800;
           font-size: 14px;
@@ -123,7 +123,7 @@ const EScooterAdvantages = () => {
           transform: translateX(-100%);
           transition: transform 0.4s ease;
         }
-        .btn-service:hover { background: #7db535; transform: translateY(-2px); box-shadow: 0 10px 32px rgba(140,198,63,0.45); }
+        .btn-service:hover { background: #cc4020; transform: translateY(-2px); box-shadow: 0 10px 32px rgba(238,83,53,0.45); }
         .btn-service:hover::after { transform: translateX(100%); }
 
         /* ── Ghost CTA button ── */
@@ -138,7 +138,7 @@ const EScooterAdvantages = () => {
           font-size: 13px;
           letter-spacing: 0.09em;
           text-transform: uppercase;
-          border: 2px solid rgba(140,198,63,0.6);
+          border: 2px solid rgba(238,83,53,0.6);
           cursor: pointer;
           font-family: inherit;
           clip-path: polygon(14px 0%, 100% 0%, calc(100% - 14px) 100%, 0% 100%);
@@ -146,8 +146,8 @@ const EScooterAdvantages = () => {
           white-space: nowrap;
         }
         .btn-service-ghost:hover {
-          background: rgba(140,198,63,0.12);
-          border-color: #8cc63f;
+          background: rgba(238,83,53,0.12);
+          border-color: #ee5335;
           transform: translateY(-2px);
         }
 
@@ -342,7 +342,7 @@ const EScooterAdvantages = () => {
       {/* Top green accent line — picks up from results-section bottom line */}
       <div style={{
         position: "absolute", top: 0, left: 0, right: 0, height: "3px", zIndex: 5,
-        background: "linear-gradient(90deg,transparent,#8cc63f 30%,#b5e16a 70%,transparent)",
+        background: "linear-gradient(90deg,transparent,#ee5335 30%,#ee5335 70%,transparent)",
       }} />
 
       {/* Content */}
@@ -351,17 +351,17 @@ const EScooterAdvantages = () => {
 
           {/* ── Label ── */}
           <div className="service-label" style={{ display: "flex", alignItems: "center", justifyContent: "center", gap: "10px", marginBottom: "16px" }}>
-            <div style={{ width: 28, height: 2, background: "#8cc63f", borderRadius: 2 }} />
+            <div style={{ width: 28, height: 2, background: "#ee5335", borderRadius: 2 }} />
             <span style={{
               display: "inline-block", padding: "4px 16px",
-              background: "rgba(140,198,63,0.15)", border: "1px solid rgba(140,198,63,0.35)",
+              background: "rgba(238,83,53,0.15)", border: "1px solid rgba(238,83,53,0.35)",
               fontSize: "11px", fontWeight: 800, letterSpacing: "0.18em",
-              textTransform: "uppercase", color: "#8cc63f",
+              textTransform: "uppercase", color: "#ee5335",
               clipPath: "polygon(8px 0%,100% 0%,calc(100% - 8px) 100%,0% 100%)",
             }}>
               Service &amp; Support
             </span>
-            <div style={{ width: 28, height: 2, background: "#8cc63f", borderRadius: 2 }} />
+            <div style={{ width: 28, height: 2, background: "#ee5335", borderRadius: 2 }} />
           </div>
 
           {/* ── Heading ── */}
@@ -370,7 +370,7 @@ const EScooterAdvantages = () => {
             color: "#fff", lineHeight: 1.15, margin: "0 0 14px",
           }}>
             We Don't Stop at Delivery —{" "}
-            <span style={{ color: "#8cc63f" }}>We Support You After Purchase Too</span>
+            <span style={{ color: "#ee5335" }}>We Support You After Purchase Too</span>
           </h2>
 
           {/* ── Trust line ── */}
@@ -380,7 +380,7 @@ const EScooterAdvantages = () => {
             marginBottom: "64px",
           }}>
             You ride.{" "}
-            <span style={{ color: "#8cc63f", fontWeight: 700, fontStyle: "normal" }}>
+            <span style={{ color: "#ee5335", fontWeight: 700, fontStyle: "normal" }}>
               We handle the support.
             </span>
           </p>
@@ -413,14 +413,14 @@ const EScooterAdvantages = () => {
               <div style={{ position: "relative" }}>
                 <div className="service-glow-ring" style={{
                   position: "absolute", inset: -20, borderRadius: "20px",
-                  background: "radial-gradient(circle, rgba(140,198,63,0.18) 0%, transparent 70%)",
+                  background: "radial-gradient(circle, rgba(238,83,53,0.18) 0%, transparent 70%)",
                   filter: "blur(16px)",
                   pointerEvents: "none",
                 }} />
                 {/* Green border frame */}
                 <div style={{
                   position: "absolute", inset: -4,
-                  border: "1.5px solid rgba(140,198,63,0.35)",
+                  border: "1.5px solid rgba(238,83,53,0.35)",
                   borderRadius: "20px",
                   pointerEvents: "none",
                 }} />
@@ -490,7 +490,7 @@ const EScooterAdvantages = () => {
       {/* Bottom green accent line */}
       <div style={{
         position: "absolute", bottom: 0, left: 0, right: 0, height: "3px", zIndex: 5,
-        background: "linear-gradient(90deg,transparent,#8cc63f 30%,#b5e16a 70%,transparent)",
+        background: "linear-gradient(90deg,transparent,#ee5335 30%,#ee5335 70%,transparent)",
       }} />
 
     </section>

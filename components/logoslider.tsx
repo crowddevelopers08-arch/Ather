@@ -34,9 +34,9 @@ const ContactUs = () => {
         body: JSON.stringify({
           name: formData.fullName,
           phone: formData.mobile,
-          treatment: formData.model, // Map model to treatment field
+          treatment: formData.model,
           preferredDateTime: formData.datetime,
-          concern: formData.landmark, // Store landmark as concern/note
+          concern: formData.landmark,
           source: window.location.href,
           formName: "Test Ride Booking Form",
           consent: true,
@@ -46,15 +46,12 @@ const ContactUs = () => {
       const data = await response.json();
 
       if (data.success) {
-        // Show success toast
         toast.success(data.message || "Test ride booked successfully!");
         
-        // Store lead ID in session storage for thank you page if needed
         if (data.data?.id) {
           sessionStorage.setItem('lastBookingId', data.data.id);
         }
         
-        // Redirect to thank you page after a short delay
         setTimeout(() => {
           router.push('/thank-you');
         }, 500);
@@ -81,8 +78,8 @@ const ContactUs = () => {
           },
           success: {
             style: {
-              background: '#8cc63f',
-              color: '#000',
+              background: '#ee5335',
+              color: '#fff',
             },
           },
           error: {
@@ -100,11 +97,11 @@ const ContactUs = () => {
           width: 100%;
           padding: 14px 20px;
           background: #fff;
-          border: 1.5px solid rgba(140,198,63,0.25);
+          border: 1.5px solid rgba(238,83,53,0.25);
           outline: none;
           font-size: 15px;
           font-family: inherit;
-          color: #111;
+          color: #000;
           border-radius: 6px;
           box-shadow: 0 2px 10px rgba(0,0,0,0.06);
           transition: all 0.22s ease;
@@ -113,12 +110,12 @@ const ContactUs = () => {
         }
         .ride-input::placeholder { color: #aaa; }
         .ride-input:hover {
-          border-color: rgba(140,198,63,0.5);
-          box-shadow: 0 4px 16px rgba(140,198,63,0.12);
+          border-color: #ee5335;
+          box-shadow: 0 4px 16px rgba(238,83,53,0.12);
         }
         .ride-input:focus {
-          border-color: #8cc63f;
-          box-shadow: 0 0 0 3px rgba(140,198,63,0.15), 0 4px 16px rgba(140,198,63,0.1);
+          border-color: #ee5335;
+          box-shadow: 0 0 0 3px rgba(238,83,53,0.15), 0 4px 16px rgba(238,83,53,0.1);
         }
         .ride-input:disabled {
           background: #f5f5f5;
@@ -130,7 +127,7 @@ const ContactUs = () => {
           font-weight: 700;
           letter-spacing: 0.1em;
           text-transform: uppercase;
-          color: #555;
+          color: #000;
           margin-bottom: 8px;
           display: block;
         }
@@ -142,8 +139,8 @@ const ContactUs = () => {
           justify-content: center;
           gap: 12px;
           padding: 17px 56px;
-          background: #8cc63f;
-          color: #000;
+          background: #ee5335;
+          color: #fff;
           font-weight: 900;
           font-size: 14px;
           letter-spacing: 0.12em;
@@ -170,17 +167,21 @@ const ContactUs = () => {
           transform: translateX(-100%);
           transition: transform 0.4s ease;
         }
-        .btn-confirm:hover:not(:disabled) { background: #7db535; transform: translateY(-2px); box-shadow: 0 10px 32px rgba(140,198,63,0.42); }
+        .btn-confirm:hover:not(:disabled) { 
+          background: #000; 
+          transform: translateY(-2px); 
+          box-shadow: 0 10px 32px rgba(238,83,53,0.42); 
+        }
         .btn-confirm:hover:not(:disabled)::after { transform: translateX(100%); }
 
         /* ── Contact icon boxes ── */
         .contact-icon-box {
           width: 64px; height: 64px;
-          background: #8cc63f;
+          background: #ee5335;
           display: flex; align-items: center; justify-content: center;
           margin: 0 auto 16px;
           clip-path: polygon(12px 0%, 100% 0%, calc(100% - 12px) 100%, 0% 100%);
-          font-size: 24px; color: #000;
+          font-size: 24px; color: #fff;
           transition: all 0.25s ease;
           position: relative;
         }
@@ -200,12 +201,12 @@ const ContactUs = () => {
         .contact-card:hover { transform: translateY(-4px); }
         .contact-card:hover .contact-icon-box {
           transform: translateY(-3px);
-          box-shadow: 0 10px 28px rgba(140,198,63,0.4);
+          box-shadow: 0 10px 28px rgba(238,83,53,0.4);
         }
 
         /* ── Select arrow ── */
         .ride-select {
-          background-image: url("data:image/svg+xml;charset=US-ASCII,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%238cc63f' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E");
+          background-image: url("data:image/svg+xml;charset=US-ASCII,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%23ee5335' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E");
           background-repeat: no-repeat;
           background-position: right 16px center;
           background-size: 18px;
@@ -351,8 +352,8 @@ const ContactUs = () => {
 
       {/* ══════════════ TOP FORM SECTION ══════════════ */}
       <div className="contact-form-container" style={{
-        background: "linear-gradient(180deg, #f4f8ee 0%, #ffffff 16%, #ffffff 100%)",
-        borderTop: "1px solid rgba(140,198,63,0.13)",
+        background: "#fff",
+        borderTop: "1px solid rgba(238,83,53,0.13)",
         padding: "80px 16px 80px",
         textAlign: "center",
         position: "relative",
@@ -362,32 +363,36 @@ const ContactUs = () => {
         {/* Top accent line */}
         <div style={{
           position: "absolute", top: 0, left: 0, right: 0, height: "3px",
-          background: "linear-gradient(90deg,transparent,#8cc63f 30%,#b5e16a 70%,transparent)",
+          background: "#ee5335",
         }} />
 
         {/* Subtle corner blobs */}
-        <div style={{ position:"absolute", top:-40, left:-40, width:200, height:200, borderRadius:"50%", background:"rgba(140,198,63,0.05)", pointerEvents:"none" }} />
-        <div style={{ position:"absolute", bottom:-40, right:-40, width:240, height:240, borderRadius:"50%", background:"rgba(140,198,63,0.05)", pointerEvents:"none" }} />
+        <div style={{ position:"absolute", top:-40, left:-40, width:200, height:200, borderRadius:"50%", background:"rgba(238,83,53,0.03)", pointerEvents:"none" }} />
+        <div style={{ position:"absolute", bottom:-40, right:-40, width:240, height:240, borderRadius:"50%", background:"rgba(238,83,53,0.03)", pointerEvents:"none" }} />
 
         <div style={{ position: "relative", zIndex: 1, maxWidth: 720, margin: "0 auto" }}>
 
           {/* Badge */}
           <div className="contact-form-badge" style={{ display:"flex", alignItems:"center", justifyContent:"center", gap:"10px", marginBottom:"16px" }}>
-            <div style={{ width:24, height:3, background:"#8cc63f", borderRadius:2 }} />
+            <div style={{ width:24, height:3, background:"#ee5335", borderRadius:2 }} />
             <span style={{
               display:"inline-block", padding:"4px 16px",
-              background:"rgba(140,198,63,0.1)", border:"1px solid rgba(140,198,63,0.3)",
-              fontSize:"11px", fontWeight:800, letterSpacing:"0.16em",
-              textTransform:"uppercase", color:"#3a7d0a",
+              background:"rgba(238,83,53,0.1)", 
+              border:"1px solid #ee5335",
+              fontSize:"11px", 
+              fontWeight:800, 
+              letterSpacing:"0.16em",
+              textTransform:"uppercase", 
+              color:"#ee5335",
               clipPath:"polygon(8px 0%,100% 0%,calc(100% - 8px) 100%,0% 100%)",
             }}>Book a Test Ride</span>
-            <div style={{ width:24, height:3, background:"#8cc63f", borderRadius:2 }} />
+            <div style={{ width:24, height:3, background:"#ee5335", borderRadius:2 }} />
           </div>
 
           {/* Heading */}
-          <h1 className="contact-form-heading" style={{ fontSize:"clamp(26px,3.5vw,44px)", fontWeight:900, margin:"0 0 14px", color:"#111", lineHeight:1.1 }}>
+          <h1 className="contact-form-heading" style={{ fontSize:"clamp(26px,3.5vw,44px)", fontWeight:900, margin:"0 0 14px", color:"#000", lineHeight:1.1 }}>
             Book Your Test Ride in{" "}
-            <span style={{ color:"#8cc63f" }}>Medavakkam</span>
+            <span style={{ color:"#ee5335" }}>Medavakkam</span>
           </h1>
 
           <p className="contact-form-subtitle" style={{ fontSize:"clamp(14px,1.1vw,17px)", color:"#666", marginBottom:"48px", lineHeight:1.75, maxWidth:560, margin:"0 auto 48px" }}>
@@ -516,7 +521,7 @@ const ContactUs = () => {
 
       {/* ══════════════ BOTTOM SHOWROOM SECTION ══════════════ */}
       <div className="contact-showroom-section" style={{
-        background: "linear-gradient(125deg, #111111 0%, #1c2a10 50%, #0f1f06 100%)",
+        background: "#000",
         padding: "64px 16px",
         display: "flex",
         justifyContent: "center",
@@ -527,20 +532,58 @@ const ContactUs = () => {
       }}>
 
         {/* Top accent line */}
-        <div style={{ position:"absolute", top:0, left:0, right:0, height:"3px",
-          background:"linear-gradient(90deg,transparent,#8cc63f 30%,#b5e16a 70%,transparent)" }} />
+        <div style={{ 
+          position:"absolute", 
+          top:0, 
+          left:0, 
+          right:0, 
+          height:"3px",
+          background: "#ee5335",
+        }} />
 
         {/* Corner glow blobs */}
-        <div style={{ position:"absolute", top:-60, right:-60, width:220, height:220, borderRadius:"50%", background:"rgba(140,198,63,0.08)", filter:"blur(48px)", pointerEvents:"none" }} />
-        <div style={{ position:"absolute", bottom:-40, left:-40, width:180, height:180, borderRadius:"50%", background:"rgba(140,198,63,0.06)", filter:"blur(36px)", pointerEvents:"none" }} />
+        <div style={{ 
+          position:"absolute", 
+          top:-60, 
+          right:-60, 
+          width:220, 
+          height:220, 
+          borderRadius:"50%", 
+          background:"rgba(238,83,53,0.15)", 
+          filter:"blur(48px)", 
+          pointerEvents:"none" 
+        }} />
+        <div style={{ 
+          position:"absolute", 
+          bottom:-40, 
+          left:-40, 
+          width:180, 
+          height:180, 
+          borderRadius:"50%", 
+          background:"rgba(238,83,53,0.12)", 
+          filter:"blur(36px)", 
+          pointerEvents:"none" 
+        }} />
 
         {/* ── Location (non-clickable) ── */}
         <div className="contact-card" style={{ cursor: "default" }}>
           <div className="contact-icon-box"><FaMapMarkerAlt /></div>
-          <h4 style={{ fontSize:"11px", fontWeight:800, letterSpacing:"0.16em", textTransform:"uppercase", color:"#8cc63f", margin:"0 0 10px" }}>
+          <h4 style={{ 
+            fontSize:"11px", 
+            fontWeight:800, 
+            letterSpacing:"0.16em", 
+            textTransform:"uppercase", 
+            color:"#ee5335", 
+            margin:"0 0 10px" 
+          }}>
             Showroom Location
           </h4>
-          <p style={{ fontSize:"13px", color:"rgba(255,255,255,0.65)", lineHeight:1.75, margin:0 }}>
+          <p style={{ 
+            fontSize:"13px", 
+            color:"rgba(255,255,255,0.8)", 
+            lineHeight:1.75, 
+            margin:0 
+          }}>
             Velachery Main Road, Near Jayachandra,<br/>
             Jayachandran Nagar, Medavakkam,<br/>
             Chennai – 600100
@@ -548,28 +591,72 @@ const ContactUs = () => {
         </div>
 
         {/* Thin vertical dividers */}
-        <div className="contact-divider" style={{ width:1, background:"rgba(140,198,63,0.18)", alignSelf:"stretch", display:"block" }} />
+        <div className="contact-divider" style={{ 
+          width:1, 
+          background:"rgba(238,83,53,0.3)", 
+          alignSelf:"stretch", 
+          display:"block" 
+        }} />
 
         {/* ── Phone (clickable) ── */}
         <a href="tel:+919876543210" className="contact-card" style={{ maxWidth:200 }}>
           <div className="contact-icon-box"><FaPhoneAlt /></div>
-          <h4 style={{ fontSize:"11px", fontWeight:800, letterSpacing:"0.16em", textTransform:"uppercase", color:"#8cc63f", margin:"0 0 10px" }}>
+          <h4 style={{ 
+            fontSize:"11px", 
+            fontWeight:800, 
+            letterSpacing:"0.16em", 
+            textTransform:"uppercase", 
+            color:"#ee5335", 
+            margin:"0 0 10px" 
+          }}>
             Call Us
           </h4>
-          <p className="contact-phone" style={{ fontSize:"15px", fontWeight:800, color:"#fff", margin:"0 0 4px" }}>+91 98765 43210</p>
-          <p className="contact-hours" style={{ fontSize:"12px", color:"rgba(255,255,255,0.45)", margin:0, letterSpacing:"0.06em" }}>9 AM – 8 PM, All Days</p>
+          <p className="contact-phone" style={{ 
+            fontSize:"15px", 
+            fontWeight:800, 
+            color:"#fff", 
+            margin:"0 0 4px" 
+          }}>+91 98765 43210</p>
+          <p className="contact-hours" style={{ 
+            fontSize:"12px", 
+            color:"rgba(255,255,255,0.5)", 
+            margin:0, 
+            letterSpacing:"0.06em" 
+          }}>9 AM – 8 PM, All Days</p>
         </a>
 
-        <div className="contact-divider" style={{ width:1, background:"rgba(140,198,63,0.18)", alignSelf:"stretch", display:"block" }} />
+        <div className="contact-divider" style={{ 
+          width:1, 
+          background:"rgba(238,83,53,0.3)", 
+          alignSelf:"stretch", 
+          display:"block" 
+        }} />
 
         {/* ── WhatsApp (clickable) ── */}
         <a href="https://wa.me/919876543210" target="_blank" rel="noopener noreferrer" className="contact-card" style={{ maxWidth:200 }}>
           <div className="contact-icon-box"><FaWhatsapp /></div>
-          <h4 style={{ fontSize:"11px", fontWeight:800, letterSpacing:"0.16em", textTransform:"uppercase", color:"#8cc63f", margin:"0 0 10px" }}>
+          <h4 style={{ 
+            fontSize:"11px", 
+            fontWeight:800, 
+            letterSpacing:"0.16em", 
+            textTransform:"uppercase", 
+            color:"#ee5335", 
+            margin:"0 0 10px" 
+          }}>
             WhatsApp
           </h4>
-          <p className="contact-phone" style={{ fontSize:"15px", fontWeight:800, color:"#fff", margin:"0 0 4px" }}>+91 98765 43210</p>
-          <p className="contact-hours" style={{ fontSize:"12px", color:"rgba(255,255,255,0.45)", margin:0, letterSpacing:"0.06em" }}>Instant Support</p>
+          <p className="contact-phone" style={{ 
+            fontSize:"15px", 
+            fontWeight:800, 
+            color:"#fff", 
+            margin:"0 0 4px" 
+          }}>+91 98765 43210</p>
+          <p className="contact-hours" style={{ 
+            fontSize:"12px", 
+            color:"rgba(255,255,255,0.5)", 
+            margin:0, 
+            letterSpacing:"0.06em" 
+          }}>Instant Support</p>
         </a>
 
       </div>

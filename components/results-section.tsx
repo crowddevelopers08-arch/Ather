@@ -14,9 +14,9 @@ const MissionSection = () => {
   return (
     <section style={{
       width: "100%",
-      /* Flow: picks up from video.tsx's #eef6e4 bottom → fades back to white */
-      background: "linear-gradient(180deg, #eef6e4 0%, #f7faf0 28%, #ffffff 100%)",
-      borderTop: "1px solid rgba(140,198,63,0.13)",
+      /* Flow: picks up from video.tsx's #fff5f2 bottom → fades back to white */
+      background: "linear-gradient(180deg, #fff5f2 0%, #ffffff 28%, #ffffff 100%)",
+      borderTop: "1px solid rgba(238,83,53,0.13)",
       paddingTop: 0,
       paddingBottom: "0px",
       overflow: "hidden",
@@ -28,8 +28,8 @@ const MissionSection = () => {
           align-items: center;
           gap: 12px;
           padding: 15px 36px;
-          background: #8cc63f;
-          color: #000;
+          background: #ee5335;
+          color: #fff;
           font-weight: 800;
           font-size: 13px;
           letter-spacing: 0.09em;
@@ -51,7 +51,7 @@ const MissionSection = () => {
           transform: translateX(-100%);
           transition: transform 0.4s ease;
         }
-        .btn-walkthrough:hover { background:#7db535; transform:translateY(-2px); box-shadow:0 8px 28px rgba(140,198,63,0.38); }
+        .btn-walkthrough:hover { background:#cc4020; transform:translateY(-2px); box-shadow:0 8px 28px rgba(238,83,53,0.38); }
         .btn-walkthrough:hover::after { transform:translateX(100%); }
 
         .feat-row {
@@ -59,7 +59,7 @@ const MissionSection = () => {
           align-items: flex-start;
           gap: 12px;
           padding: 10px 0;
-          border-bottom: 1px solid rgba(140,198,63,0.1);
+          border-bottom: 1px solid rgba(238,83,53,0.1);
           transition: background 0.18s ease;
         }
         .feat-row:last-child { border-bottom: none; }
@@ -67,8 +67,8 @@ const MissionSection = () => {
         .feat-tick {
           flex-shrink: 0;
           width: 20px; height: 20px;
-          background: rgba(140,198,63,0.12);
-          border: 1.5px solid #8cc63f;
+          background: rgba(238,83,53,0.12);
+          border: 1.5px solid #ee5335;
           display: flex; align-items: center; justify-content: center;
           margin-top: 1px;
           clip-path: polygon(4px 0%, 100% 0%, calc(100% - 4px) 100%, 0% 100%);
@@ -242,7 +242,7 @@ const MissionSection = () => {
       `}</style>
 
       {/* Top accent line — connects to video.tsx bottom accent line */}
-      <div className="accent-line-top" style={{ height:"3px", background:"linear-gradient(90deg,transparent,#8cc63f 30%,#b5e16a 70%,transparent)", marginBottom:"72px" }} />
+      <div className="accent-line-top" style={{ height:"3px", background:"linear-gradient(90deg,transparent,#ee5335 30%,#ee5335 70%,transparent)", marginBottom:"72px" }} />
 
       <div className="section-container" style={{ maxWidth:"1400px", margin:"0 auto", padding:"0 48px" }}>
         <div className="mission-grid" style={{ display:"grid", gridTemplateColumns:"1fr 1fr", gap:"80px", alignItems:"center" }}>
@@ -260,7 +260,7 @@ const MissionSection = () => {
             }}>
               <img src="/0222.png" alt="" style={{ width:"100%", height:"100%", objectFit:"cover" }} />
               {/* Green tint overlay */}
-              <div style={{ position:"absolute", inset:0, background:"linear-gradient(135deg,rgba(140,198,63,0.08) 0%,transparent 60%)" }} />
+              <div style={{ position:"absolute", inset:0, background:"linear-gradient(135deg,rgba(238,83,53,0.08) 0%,transparent 60%)" }} />
             </div>
 
             {/* Bottom image */}
@@ -272,7 +272,7 @@ const MissionSection = () => {
               boxShadow:"0 20px 56px rgba(0,0,0,0.13)",
             }}>
               <img src="/07.png" alt="" style={{ width:"100%", height:"100%", objectFit:"cover" }} />
-              <div style={{ position:"absolute", inset:0, background:"linear-gradient(315deg,rgba(140,198,63,0.08) 0%,transparent 60%)" }} />
+              <div style={{ position:"absolute", inset:0, background:"linear-gradient(315deg,rgba(238,83,53,0.08) 0%,transparent 60%)" }} />
             </div>
 
             {/* 85% badge — upgraded */}
@@ -283,9 +283,9 @@ const MissionSection = () => {
               {/* Outer ring */}
               <div className="badge-ring" style={{
                 width:90, height:90, borderRadius:"50%",
-                border:"3px solid #8cc63f",
+                border:"3px solid #ee5335",
                 background:"#fff",
-                boxShadow:"0 8px 32px rgba(140,198,63,0.28), 0 2px 8px rgba(0,0,0,0.08)",
+                boxShadow:"0 8px 32px rgba(238,83,53,0.28), 0 2px 8px rgba(0,0,0,0.08)",
                 display:"flex", flexDirection:"column",
                 alignItems:"center", justifyContent:"center",
                 position:"relative",
@@ -293,10 +293,10 @@ const MissionSection = () => {
                 {/* Thin inner ring */}
                 <div style={{
                   position:"absolute", inset:6, borderRadius:"50%",
-                  border:"1px solid rgba(140,198,63,0.25)",
+                  border:"1px solid rgba(238,83,53,0.25)",
                 }} />
                 <p style={{ margin:0, fontSize:"30px", fontWeight:900, color:"#111", lineHeight:1 }}>85%</p>
-                <p style={{ margin:"3px 0 0", fontSize:"11px", fontWeight:700, color:"#8cc63f", letterSpacing:"0.1em", textTransform:"uppercase" }}>Clients</p>
+                <p style={{ margin:"3px 0 0", fontSize:"11px", fontWeight:700, color:"#ee5335", letterSpacing:"0.1em", textTransform:"uppercase" }}>Clients</p>
               </div>
               {/* Label below badge */}
               <div className="badge-label" style={{
@@ -307,7 +307,7 @@ const MissionSection = () => {
             </div>
 
             {/* Glow behind images */}
-            <div className="glow-blob" style={{ position:"absolute", top:"30%", left:"30%", width:"240px", height:"240px", borderRadius:"50%", background:"radial-gradient(circle,rgba(140,198,63,0.12) 0%,transparent 70%)", pointerEvents:"none" }} />
+            <div className="glow-blob" style={{ position:"absolute", top:"30%", left:"30%", width:"240px", height:"240px", borderRadius:"50%", background:"radial-gradient(circle,rgba(238,83,53,0.12) 0%,transparent 70%)", pointerEvents:"none" }} />
           </div>
 
           {/* ── RIGHT CONTENT ── */}
@@ -315,12 +315,12 @@ const MissionSection = () => {
 
             {/* Label */}
             <div style={{ display:"flex", alignItems:"center", gap:"10px", marginBottom:"18px" }}>
-              <div style={{ width:28, height:3, background:"#8cc63f", borderRadius:2 }} />
+              <div style={{ width:28, height:3, background:"#ee5335", borderRadius:2 }} />
               <span style={{
                 display:"inline-block", padding:"4px 14px",
-                background:"rgba(140,198,63,0.1)", border:"1px solid rgba(140,198,63,0.3)",
+                background:"rgba(238,83,53,0.1)", border:"1px solid rgba(238,83,53,0.3)",
                 fontSize:"11px", fontWeight:800, letterSpacing:"0.16em",
-                textTransform:"uppercase", color:"#3a7d0a",
+                textTransform:"uppercase", color:"#ee5335",
                 clipPath:"polygon(8px 0%,100% 0%,calc(100% - 8px) 100%,0% 100%)",
               }}>
                 Key Features
@@ -330,7 +330,7 @@ const MissionSection = () => {
             {/* Heading */}
             <h2 style={{ fontSize:"clamp(26px,3vw,44px)", fontWeight:900, color:"#111", lineHeight:1.1, margin:"0 0 16px" }}>
               Smart Features That Make<br />
-              <span style={{ color:"#8cc63f" }}>Ather Different</span>
+              <span style={{ color:"#ee5335" }}>Ather Different</span>
             </h2>
 
             {/* Description */}
@@ -345,7 +345,7 @@ const MissionSection = () => {
                 <div key={feat} className="feat-row">
                   <div className="feat-tick">
                     <svg width="10" height="10" viewBox="0 0 12 12" fill="none">
-                      <path d="M2 6l3 3 5-5" stroke="#8cc63f" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                      <path d="M2 6l3 3 5-5" stroke="#ee5335" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
                     </svg>
                   </div>
                   <p style={{ margin:0, fontSize:"14px", fontWeight:600, color:"#222", lineHeight:1.45 }}>{feat}</p>
@@ -365,7 +365,7 @@ const MissionSection = () => {
               </a>
               {/* Subtle trust line */}
               <div style={{ display:"flex", alignItems:"center", gap:"8px" }}>
-                <div style={{ width:7, height:7, borderRadius:"50%", background:"#8cc63f" }} />
+                <div style={{ width:7, height:7, borderRadius:"50%", background:"#ee5335" }} />
                 <span style={{ fontSize:"13px", fontWeight:600, color:"#555" }}>No obligation · Free walkthrough</span>
               </div>
             </div>
@@ -376,7 +376,7 @@ const MissionSection = () => {
       </div>
 
       {/* Bottom accent line */}
-      <div className="accent-line-bottom" style={{ height:"3px", background:"linear-gradient(90deg,transparent,#8cc63f 30%,#b5e16a 70%,transparent)", marginTop:"96px" }} />
+      <div className="accent-line-bottom" style={{ height:"3px", background:"linear-gradient(90deg,transparent,#ee5335 30%,#ee5335 70%,transparent)", marginTop:"96px" }} />
 
     </section>
   );

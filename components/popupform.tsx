@@ -236,7 +236,7 @@ export default function ConsultationForm({ onClose }: ConsultationFormProps) {
         <motion.div
           initial={{ opacity: 0, y: -10 }}
           animate={{ opacity: 1, y: 0 }}
-          className="mb-3 p-2 sm:p-2.5 bg-green-100 border border-green-400 text-green-700 rounded-md text-center text-xs sm:text-sm"
+          className="mb-3 p-2 sm:p-2.5 bg-[#fff0ed] border border-[#ee5335] text-[#ee5335] rounded-md text-center text-xs sm:text-sm"
         >
           <div className="flex items-center justify-center">
             <svg className="w-4 h-4 mr-1.5" fill="currentColor" viewBox="0 0 20 20">

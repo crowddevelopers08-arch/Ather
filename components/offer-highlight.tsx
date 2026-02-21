@@ -90,7 +90,7 @@ const TestimonialsSection = () => {
         .nav-btn-prev { background: #fff; color: #000; }
         .nav-btn-prev:hover { background: #f0f0f0; transform: translateY(-1px); box-shadow: 0 4px 14px rgba(0,0,0,0.18); }
         .nav-btn-next { background: #111; color: #fff; }
-        .nav-btn-next:hover { background: #1c2a10; transform: translateY(-1px); box-shadow: 0 4px 14px rgba(0,0,0,0.3); }
+        .nav-btn-next:hover { background: #0e1010; transform: translateY(-1px); box-shadow: 0 4px 14px rgba(0,0,0,0.3); }
 
         /* Mobile nav buttons — smaller */
         .nav-btn-sm { width: 36px; height: 36px; font-size: 17px; }
@@ -101,7 +101,7 @@ const TestimonialsSection = () => {
           background: #d1d5db; transition: all 0.25s ease;
           clip-path: polygon(4px 0%, 100% 0%, calc(100% - 4px) 100%, 0% 100%);
         }
-        .dot-btn.active { background: #8cc63f; }
+        .dot-btn.active { background: #ee5335; }
 
         /* ── MOBILE RESPONSIVE FIXES ── */
         @media (max-width: 768px) {
@@ -234,7 +234,7 @@ const TestimonialsSection = () => {
       {/* Top accent line — connects from service section's bottom green line */}
       <div style={{
         position: "absolute", top: 0, left: 0, right: 0, height: "3px",
-        background: "linear-gradient(90deg,transparent,#8cc63f 30%,#b5e16a 70%,transparent)",
+        background: "linear-gradient(90deg,transparent,#ee5335 30%,#ee5335 70%,transparent)",
       }} />
 
       <div className="testimonial-container" style={{ maxWidth: "1200px", margin: "0 auto", padding: isMobile ? "0 16px" : "0 48px", position: "relative" }}>
@@ -244,12 +244,12 @@ const TestimonialsSection = () => {
 
           {/* Badge */}
           <div style={{ display: "flex", alignItems: "center", gap: "10px", marginBottom: "14px" }}>
-            <div style={{ width: 24, height: 3, background: "#8cc63f", borderRadius: 2 }} />
+            <div style={{ width: 24, height: 3, background: "#ee5335", borderRadius: 2 }} />
             <span style={{
               display: "inline-block", padding: "4px 14px",
-              background: "rgba(140,198,63,0.1)", border: "1px solid rgba(140,198,63,0.3)",
+              background: "rgba(238,83,53,0.1)", border: "1px solid rgba(238,83,53,0.3)",
               fontSize: "11px", fontWeight: 800, letterSpacing: "0.16em",
-              textTransform: "uppercase", color: "#3a7d0a",
+              textTransform: "uppercase", color: "#ee5335",
               clipPath: "polygon(8px 0%,100% 0%,calc(100% - 8px) 100%,0% 100%)",
             }}>
               Testimonials
@@ -261,14 +261,14 @@ const TestimonialsSection = () => {
             fontWeight: 900, margin: 0, lineHeight: 1.15, color: "#111",
           }}>
             Real Riders.{" "}
-            <span style={{ color: "#8cc63f" }}>Real Feedback.</span>
+            <span style={{ color: "#ee5335" }}>Real Feedback.</span>
           </h2>
         </div>
 
         {/* ── Green testimonial card ── */}
         <div className="testimonial-card" style={{
           position: "relative",
-          background: "linear-gradient(125deg, #8cc63f 0%, #7db535 55%, #6aa828 100%)",
+          background: "linear-gradient(125deg, #ee5335 0%, #cc4020 55%, #b03510 100%)",
           width: "100%",
           borderTopLeftRadius: cardRadius,
           borderBottomRightRadius: cardRadius,
@@ -278,7 +278,7 @@ const TestimonialsSection = () => {
           minHeight: isMobile ? "auto" : screenSize === "lg" ? "320px" : "350px",
           padding: isMobile ? "0 0 28px 0" : "0",
           boxSizing: "border-box",
-          boxShadow: "0 24px 64px rgba(140,198,63,0.28), 0 4px 16px rgba(0,0,0,0.08)",
+          boxShadow: "0 24px 64px rgba(238,83,53,0.28), 0 4px 16px rgba(0,0,0,0.08)",
           overflow: "visible",
         }}>
 
@@ -444,7 +444,7 @@ const TestimonialsSection = () => {
       {/* Bottom accent line */}
       <div style={{
         position: "absolute", bottom: 0, left: 0, right: 0, height: "3px",
-        background: "linear-gradient(90deg,transparent,#8cc63f 30%,#b5e16a 70%,transparent)",
+        background: "linear-gradient(90deg,transparent,#ee5335 30%,#ee5335 70%,transparent)",
       }} />
 
     </section>

@@ -9,7 +9,7 @@ const IntroSmartz = () => {
           align-items: center;
           gap: 10px;
           padding: 14px 32px;
-          background: #8cc63f;
+          background: #ee5335;
           color: #000;
           font-weight: 800;
           font-size: 13px;
@@ -32,9 +32,9 @@ const IntroSmartz = () => {
           transition: transform 0.4s ease;
         }
         .cta-btn-primary:hover {
-          background: #7db535;
+          background: #cc4020;
           transform: translateY(-2px);
-          box-shadow: 0 8px 28px rgba(140,198,63,0.38);
+          box-shadow: 0 8px 28px rgba(238,83,53,0.38);
         }
         .cta-btn-primary:hover::after { transform: translateX(100%); }
 
@@ -49,21 +49,21 @@ const IntroSmartz = () => {
           font-size: 13px;
           letter-spacing: 0.08em;
           text-transform: uppercase;
-          border: 2px solid #8cc63f;
+          border: 2px solid #ee5335;
           cursor: pointer;
           font-family: inherit;
           clip-path: polygon(14px 0%, 100% 0%, calc(100% - 14px) 100%, 0% 100%);
           transition: all 0.22s ease;
         }
         .cta-btn-ghost:hover {
-          background: rgba(140,198,63,0.1);
+          background: rgba(238,83,53,0.1);
           transform: translateY(-2px);
-          box-shadow: 0 8px 24px rgba(140,198,63,0.2);
+          box-shadow: 0 8px 24px rgba(238,83,53,0.2);
         }
 
         .feature-icon-ring {
           width: 64px; height: 64px;
-          border: 1.5px solid rgba(140,198,63,0.5);
+          border: 1.5px solid rgba(238,83,53,0.5);
           background: rgba(255,255,255,0.7);
           backdrop-filter: blur(8px);
           border-radius: 50%;
@@ -74,15 +74,15 @@ const IntroSmartz = () => {
           flex-shrink: 0;
         }
         .feature-icon-ring:hover {
-          border-color: #8cc63f;
-          background: rgba(140,198,63,0.08);
-          box-shadow: 0 0 0 6px rgba(140,198,63,0.08);
+          border-color: #ee5335;
+          background: rgba(238,83,53,0.08);
+          box-shadow: 0 0 0 6px rgba(238,83,53,0.08);
         }
 
         .badge-tag {
           display: inline-block;
           padding: 4px 14px;
-          background: #8cc63f;
+          background: #ee5335;
           color: #000;
           font-size: 11px;
           font-weight: 800;
@@ -218,13 +218,13 @@ const IntroSmartz = () => {
       <section style={{
         width: "100%",
         background: "linear-gradient(135deg, #ffffff 0%, #f2f8e8 45%, #e8f2d8 100%)",
-        borderTop: "1px solid rgba(140,198,63,0.15)",
-        borderBottom: "1px solid rgba(140,198,63,0.12)",
+        borderTop: "1px solid rgba(238,83,53,0.15)",
+        borderBottom: "1px solid rgba(238,83,53,0.12)",
         paddingTop: "0px",
         paddingBottom: "72px",
       }}>
         {/* Subtle top accent line */}
-        <div className="accent-line-top" style={{ height: "3px", background: "linear-gradient(90deg, transparent, #8cc63f 30%, #b5e16a 70%, transparent)", marginBottom: "56px" }} />
+        <div className="accent-line-top" style={{ height: "3px", background: "linear-gradient(90deg, transparent, #ee5335 30%, #ee5335 70%, transparent)", marginBottom: "56px" }} />
 
         <div className="section-container" style={{ maxWidth: "1400px", margin: "0 auto", padding: "0 48px" }}>
           <div className="intro-grid" style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "80px", alignItems: "center" }}>
@@ -236,7 +236,7 @@ const IntroSmartz = () => {
               <h1 style={{ fontSize: "clamp(28px,4vw,52px)", fontWeight: 900, color: "#111", lineHeight: 1.1, margin: "0 0 8px" }}>
                 Choose Your Ather
               </h1>
-              <h2 style={{ fontSize: "clamp(18px,2.2vw,28px)", fontWeight: 600, color: "#3a7d0a", margin: "0 0 40px" }}>
+              <h2 style={{ fontSize: "clamp(18px,2.2vw,28px)", fontWeight: 600, color: "#ee5335", margin: "0 0 40px" }}>
                 Ather 450 — Built for Pure Performance
               </h2>
 
@@ -284,7 +284,7 @@ const IntroSmartz = () => {
               <div className="glow-blob" style={{
                 position: "absolute", right: "5%", top: "50%", transform: "translateY(-50%)",
                 width: "420px", height: "420px", borderRadius: "50%",
-                background: "radial-gradient(circle, rgba(140,198,63,0.13) 0%, transparent 70%)",
+                background: "radial-gradient(circle, rgba(238,83,53,0.13) 0%, transparent 70%)",
                 pointerEvents: "none",
               }} />
               <img src="/4500.png" alt="Ather 450" style={{ width: "90%", maxWidth: "520px", objectFit: "contain", position: "relative", zIndex: 1 }} />
@@ -299,7 +299,7 @@ const IntroSmartz = () => {
       <section style={{
         width: "100%",
         background: "linear-gradient(135deg, #e4f0d4 0%, #f0f8e6 40%, #ffffff 100%)",
-        borderBottom: "1px solid rgba(140,198,63,0.15)",
+        borderBottom: "1px solid rgba(238,83,53,0.15)",
         paddingTop: "72px",
         paddingBottom: "0px",
       }}>
@@ -311,7 +311,7 @@ const IntroSmartz = () => {
               <div className="glow-blob" style={{
                 position: "absolute", left: "5%", top: "50%", transform: "translateY(-50%)",
                 width: "420px", height: "420px", borderRadius: "50%",
-                background: "radial-gradient(circle, rgba(140,198,63,0.15) 0%, transparent 70%)",
+                background: "radial-gradient(circle, rgba(238,83,53,0.15) 0%, transparent 70%)",
                 pointerEvents: "none",
               }} />
               <img src="/rixtanew.png" alt="Ather Rizta" style={{ width: "90%", maxWidth: "520px", objectFit: "contain", position: "relative", zIndex: 1 }} />
@@ -324,7 +324,7 @@ const IntroSmartz = () => {
               <h1 style={{ fontSize: "clamp(28px,4vw,52px)", fontWeight: 900, color: "#111", lineHeight: 1.1, margin: "0 0 8px" }}>
                 Ather Rizta
               </h1>
-              <h2 style={{ fontSize: "clamp(18px,2.2vw,28px)", fontWeight: 600, color: "#3a7d0a", margin: "0 0 40px" }}>
+              <h2 style={{ fontSize: "clamp(18px,2.2vw,28px)", fontWeight: 600, color: "#ee5335", margin: "0 0 40px" }}>
                 Made for Your Family
               </h2>
 
@@ -369,7 +369,7 @@ const IntroSmartz = () => {
           </div>
 
           {/* Bottom accent line — mirrors the top of section 1, completing the green flow */}
-          <div className="accent-line-bottom" style={{ height: "3px", background: "linear-gradient(90deg, transparent, #8cc63f 30%, #b5e16a 70%, transparent)", marginTop: "56px" }} />
+          <div className="accent-line-bottom" style={{ height: "3px", background: "linear-gradient(90deg, transparent, #ee5335 30%, #ee5335 70%, transparent)", marginTop: "56px" }} />
         </div>
       </section>
     </>

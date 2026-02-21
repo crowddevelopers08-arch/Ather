@@ -59,36 +59,36 @@ const AtherBanner = ({
       <svg style={{ position: 'absolute', width: 0, height: 0 }}>
         <defs>
           <svg id="ather-logo" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M12 2L2 7L12 12L22 7L12 2Z" stroke="#8cc63f" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-            <path d="M2 17L12 22L22 17" stroke="#8cc63f" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-            <path d="M2 12L12 17L22 12" stroke="#8cc63f" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+            <path d="M12 2L2 7L12 12L22 7L12 2Z" stroke="#ee5335" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+            <path d="M2 17L12 22L22 17" stroke="#ee5335" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+            <path d="M2 12L12 17L22 12" stroke="#ee5335" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
           </svg>
           
           <svg id="location-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M12 21C15.5 17.4 19 14.1764 19 10.2C19 6.22355 15.866 3 12 3C8.13401 3 5 6.22355 5 10.2C5 14.1764 8.5 17.4 12 21Z" stroke="#8cc63f" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-            <circle cx="12" cy="10" r="3" stroke="#8cc63f" strokeWidth="2"/>
+            <path d="M12 21C15.5 17.4 19 14.1764 19 10.2C19 6.22355 15.866 3 12 3C8.13401 3 5 6.22355 5 10.2C5 14.1764 8.5 17.4 12 21Z" stroke="#ee5335" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+            <circle cx="12" cy="10" r="3" stroke="#ee5335" strokeWidth="2"/>
           </svg>
 
           <svg id="emissions-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M12 3V12M12 12L15 9M12 12L9 9" stroke="#8cc63f" strokeWidth="2" strokeLinecap="round"/>
-            <circle cx="12" cy="15" r="6" stroke="#8cc63f" strokeWidth="2"/>
+            <path d="M12 3V12M12 12L15 9M12 12L9 9" stroke="#ee5335" strokeWidth="2" strokeLinecap="round"/>
+            <circle cx="12" cy="15" r="6" stroke="#ee5335" strokeWidth="2"/>
           </svg>
 
           <svg id="connectivity-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M18 8C19.6569 8 21 9.34315 21 11C21 12.6569 19.6569 14 18 14" stroke="#8cc63f" strokeWidth="2" strokeLinecap="round"/>
-            <path d="M6 8C4.34315 8 3 9.34315 3 11C3 12.6569 4.34315 14 6 14" stroke="#8cc63f" strokeWidth="2" strokeLinecap="round"/>
-            <path d="M8 20H16M12 14V20" stroke="#8cc63f" strokeWidth="2" strokeLinecap="round"/>
-            <circle cx="12" cy="11" r="2" stroke="#8cc63f" strokeWidth="2"/>
+            <path d="M18 8C19.6569 8 21 9.34315 21 11C21 12.6569 19.6569 14 18 14" stroke="#ee5335" strokeWidth="2" strokeLinecap="round"/>
+            <path d="M6 8C4.34315 8 3 9.34315 3 11C3 12.6569 4.34315 14 6 14" stroke="#ee5335" strokeWidth="2" strokeLinecap="round"/>
+            <path d="M8 20H16M12 14V20" stroke="#ee5335" strokeWidth="2" strokeLinecap="round"/>
+            <circle cx="12" cy="11" r="2" stroke="#ee5335" strokeWidth="2"/>
           </svg>
 
           <svg id="charging-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M9 2L5 12H10L8 22" stroke="#8cc63f" strokeWidth="2" strokeLinecap="round"/>
-            <path d="M15 2L11 12H16L14 22" stroke="#8cc63f" strokeWidth="2" strokeLinecap="round"/>
-            <rect x="7" y="12" width="10" height="2" fill="#8cc63f"/>
+            <path d="M9 2L5 12H10L8 22" stroke="#ee5335" strokeWidth="2" strokeLinecap="round"/>
+            <path d="M15 2L11 12H16L14 22" stroke="#ee5335" strokeWidth="2" strokeLinecap="round"/>
+            <rect x="7" y="12" width="10" height="2" fill="#ee5335"/>
           </svg>
 
           <svg id="check-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <circle cx="12" cy="12" r="8" fill="#8cc63f"/>
+            <circle cx="12" cy="12" r="8" fill="#ee5335"/>
             <path d="M8 12L11 15L16 9" stroke="white" strokeWidth="2" strokeLinecap="round"/>
           </svg>
 
@@ -97,19 +97,19 @@ const AtherBanner = ({
           </svg>
 
           <svg id="tick-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M5 13L9 17L19 7" stroke="#8cc63f" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+            <path d="M5 13L9 17L19 7" stroke="#ee5335" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
           </svg>
 
           <svg id="eco-leaf" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M12 22C12 22 12 15 7 10C2 5 12 2 12 2C12 2 22 5 17 10C12 15 12 22 12 22Z" stroke="#8cc63f" strokeWidth="2" strokeLinecap="round"/>
+            <path d="M12 22C12 22 12 15 7 10C2 5 12 2 12 2C12 2 22 5 17 10C12 15 12 22 12 22Z" stroke="#ee5335" strokeWidth="2" strokeLinecap="round"/>
           </svg>
 
           <svg id="wifi-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M12 20H12.01M2 8C4.5 5.5 8 4 12 4C16 4 19.5 5.5 22 8M5 12C7 10 9.5 9 12 9C14.5 9 17 10 19 12" stroke="#8cc63f" strokeWidth="2" strokeLinecap="round"/>
+            <path d="M12 20H12.01M2 8C4.5 5.5 8 4 12 4C16 4 19.5 5.5 22 8M5 12C7 10 9.5 9 12 9C14.5 9 17 10 19 12" stroke="#ee5335" strokeWidth="2" strokeLinecap="round"/>
           </svg>
 
           <svg id="bolt-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M13 2L4 14H12L11 22L20 10H12L13 2Z" stroke="#8cc63f" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+            <path d="M13 2L4 14H12L11 22L20 10H12L13 2Z" stroke="#ee5335" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
           </svg>
         </defs>
       </svg>
@@ -119,7 +119,7 @@ const AtherBanner = ({
   position: "fixed", top: 0, left: 0, right: 0, zIndex: 100,
   background: navScrolled ? "rgba(255,255,255,0.97)" : "rgba(255,255,255,0.85)",
   backdropFilter: "blur(14px)",
-  borderBottom: `1px solid ${navScrolled ? "rgba(140,198,63,0.25)" : "rgba(140,198,63,0.12)"}`,
+  borderBottom: `1px solid ${navScrolled ? "rgba(238,83,53,0.25)" : "rgba(238,83,53,0.12)"}`,
   boxShadow: navScrolled ? "0 4px 28px rgba(0,0,0,0.08)" : "none",
   transition: "all 0.3s ease",
   animation: "slideDown 0.6s ease forwards",
@@ -164,13 +164,13 @@ const AtherBanner = ({
     <div style={{ display: "flex", alignItems: "center", gap: "20px" }}>
       {/* Live store badge */}
       {/* <div className="hero-nav-badge" style={{ display: "flex", alignItems: "center", gap: "7px",
-        background: "rgba(140,198,63,0.1)", border: "1px solid rgba(140,198,63,0.25)",
+        background: "rgba(238,83,53,0.1)", border: "1px solid rgba(238,83,53,0.25)",
         padding: "5px 14px", borderRadius: "100px" }}>
         <div style={{
-          width: "7px", height: "7px", borderRadius: "50%", background: "#8cc63f",
+          width: "7px", height: "7px", borderRadius: "50%", background: "#ee5335",
           animation: "dotPulse 1.6s ease-in-out infinite",
         }} />
-        <span style={{ fontSize: "12px", fontWeight: "700", color: "#3a7d0a", letterSpacing: "0.06em" }}>
+        <span style={{ fontSize: "12px", fontWeight: "700", color: "#ee5335", letterSpacing: "0.06em" }}>
           Store Open
         </span>
       </div> */}
@@ -184,14 +184,14 @@ const AtherBanner = ({
 </nav>
       {/* ── BACKGROUND LAYERS ── */}
       <div style={{ position:"absolute", inset:0,
-        backgroundImage:`linear-gradient(rgba(140,198,63,0.07) 1px, transparent 1px),
-                         linear-gradient(90deg, rgba(140,198,63,0.07) 1px, transparent 1px)`,
+        backgroundImage:`linear-gradient(rgba(238,83,53,0.07) 1px, transparent 1px),
+                         linear-gradient(90deg, rgba(238,83,53,0.07) 1px, transparent 1px)`,
         backgroundSize:"60px 60px", zIndex:0 }} />
       <div style={{ position:"absolute", top:"-15%", right:"-8%", width:"600px", height:"600px",
-        borderRadius:"50%", background:"radial-gradient(circle, rgba(140,198,63,0.18) 0%, transparent 70%)",
+        borderRadius:"50%", background:"radial-gradient(circle, rgba(238,83,53,0.18) 0%, transparent 70%)",
         zIndex:0, animation:"pulse 4s ease-in-out infinite" }} />
       <div style={{ position:"absolute", bottom:"-10%", left:"15%", width:"500px", height:"300px",
-        borderRadius:"50%", background:"radial-gradient(circle, rgba(140,198,63,0.1) 0%, transparent 70%)", zIndex:0 }} />
+        borderRadius:"50%", background:"radial-gradient(circle, rgba(238,83,53,0.1) 0%, transparent 70%)", zIndex:0 }} />
 
       <style>{`
         @keyframes pulse    { 0%,100%{transform:scale(1);opacity:1} 50%{transform:scale(1.08);opacity:0.6} }
@@ -204,25 +204,25 @@ const AtherBanner = ({
         @keyframes dotPulse { 0%,100%{opacity:1;transform:scale(1)} 50%{opacity:0.4;transform:scale(0.6)} }
 
         .btn-primary {
-          background:#8cc63f; color:#000; border:none; padding:16px 38px;
+          background:#ee5335; color:#fff; border:none; padding:16px 38px;
           font-family:'Outfit',sans-serif; font-weight:800; font-size:14px;
           letter-spacing:0.09em; text-transform:uppercase; cursor:pointer;
           clip-path:polygon(12px 0%,100% 0%,calc(100% - 12px) 100%,0% 100%);
           transition:all 0.2s ease;
         }
-        .btn-primary:hover  { background:#7db535; transform:translateY(-2px); box-shadow:0 8px 28px rgba(140,198,63,0.4); }
+        .btn-primary:hover  { background:#cc4020; transform:translateY(-2px); box-shadow:0 8px 28px rgba(238,83,53,0.4); }
 
         .btn-secondary {
-          background:transparent; color:#333; border:2px solid #8cc63f; padding:14px 38px;
+          background:transparent; color:#333; border:2px solid #ee5335; padding:14px 38px;
           font-family:'Outfit',sans-serif; font-weight:700; font-size:14px;
           letter-spacing:0.09em; text-transform:uppercase; cursor:pointer;
           clip-path:polygon(12px 0%,100% 0%,calc(100% - 12px) 100%,0% 100%);
           transition:all 0.2s ease;
         }
-        .btn-secondary:hover { background:rgba(140,198,63,0.07); transform:translateY(-2px); }
+        .btn-secondary:hover { background:rgba(238,83,53,0.07); transform:translateY(-2px); }
 
         .tab { cursor:pointer; transition:all 0.25s ease; outline:none; }
-        .tab:hover { background:rgba(140,198,63,0.07) !important; }
+        .tab:hover { background:rgba(238,83,53,0.07) !important; }
 
         .nav-link {
           color:#444; font-size:14px; font-weight:600; letter-spacing:0.04em;
@@ -232,25 +232,25 @@ const AtherBanner = ({
         }
         .nav-link::after {
           content:''; position:absolute; bottom:-2px; left:0; width:0; height:2px;
-          background:#8cc63f; transition:width 0.25s ease;
+          background:#ee5335; transition:width 0.25s ease;
         }
-        .nav-link:hover { color:#3a7d0a; }
+        .nav-link:hover { color:#ee5335; }
         .nav-link:hover::after { width:100%; }
 
         .btn-nav {
-          background:#8cc63f; color:#000; border:none; padding:9px 24px;
+          background:#ee5335; color:#fff; border:none; padding:9px 24px;
           font-family:'Outfit',sans-serif; font-weight:800; font-size:13px;
           letter-spacing:0.08em; text-transform:uppercase; cursor:pointer;
           clip-path:polygon(10px 0%,100% 0%,calc(100% - 10px) 100%,0% 100%);
           transition:all 0.2s ease;
         }
-        .btn-nav:hover { background:#7db535; transform:translateY(-1px); box-shadow:0 6px 20px rgba(140,198,63,0.35); }
+        .btn-nav:hover { background:#cc4020; transform:translateY(-1px); box-shadow:0 6px 20px rgba(238,83,53,0.35); }
 
         .indicator-dot {
-          width:8px; height:8px; border-radius:50%; border:2px solid #8cc63f;
+          width:8px; height:8px; border-radius:50%; border:2px solid #ee5335;
           cursor:pointer; transition:all 0.25s ease;
         }
-        .indicator-dot.active { background:#8cc63f; }
+        .indicator-dot.active { background:#ee5335; }
 
         .icon-svg { width:20px; height:20px; display:inline-block; }
 
@@ -314,8 +314,8 @@ const AtherBanner = ({
             {/* Eyebrow */}
             <div className="hero-eyebrow" style={{ display:"inline-flex", alignItems:"center", gap:"10px",
               marginBottom:"22px", ...anim("slideIn",0.2) }}>
-              <div style={{ width:"36px", height:"2px", background:"#8cc63f" }} />
-              <span style={{ color:"#8cc63f", fontSize:"12px", fontWeight:"700",
+              <div style={{ width:"36px", height:"2px", background:"#ee5335" }} />
+              <span style={{ color:"#ee5335", fontSize:"12px", fontWeight:"700",
                 letterSpacing:"0.22em", textTransform:"uppercase" }}>
                 Chennai's Smarter EV Choice
               </span>
@@ -325,25 +325,25 @@ const AtherBanner = ({
             <h1 className="hero-heading" style={{ color:"#111", fontSize:"clamp(36px,4.2vw,62px)", fontWeight:"900",
               lineHeight:"1.0", margin:"0 0 10px 0", letterSpacing:"-0.025em", ...anim("slideUp",0.3) }}>
               Meet Your<br />
-              <span style={{ color:"#8cc63f" }}>Next Electric</span><br />
+              <span style={{ color:"#ee5335" }}>Next Electric</span><br />
               Ride
             </h1>
 
             {/* Location pill with SVG */}
-            <div style={{ display:"inline-flex", alignItems:"center", gap:"8px", background:"rgba(140,198,63,0.1)",
-              border:"1px solid rgba(140,198,63,0.3)", padding:"5px 16px", marginBottom:"20px",
+            <div style={{ display:"inline-flex", alignItems:"center", gap:"8px", background:"rgba(238,83,53,0.1)",
+              border:"1px solid rgba(238,83,53,0.3)", padding:"5px 16px", marginBottom:"20px",
               fontSize:"13px", color:"#444", fontWeight:"500", letterSpacing:"0.04em", ...anim("fadeIn",0.45) }}>
               <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <use href="#location-icon" />
               </svg>
-              <span>Ather in <span style={{ color:"#5a9e20", fontWeight:"700" }}>Medavakkam</span></span>
+              <span>Ather in <span style={{ color:"#ee5335", fontWeight:"700" }}>Medavakkam</span></span>
             </div>
 
             {/* Sub-headline */}
             <p className="hero-subtext" style={{ color:"#555", fontSize:"16px", lineHeight:"1.65", margin:"0 0 32px 0",
               maxWidth:"420px", fontWeight:"400", ...anim("slideUp",0.5) }}>
-              Test ride the <span style={{ color:"#5a9e20", fontWeight:"600" }}>Ather 450</span> (performance) or{" "}
-              <span style={{ color:"#5a9e20", fontWeight:"600" }}>Ather Rizta</span> (family comfort) and switch
+              Test ride the <span style={{ color:"#ee5335", fontWeight:"600" }}>Ather 450</span> (performance) or{" "}
+              <span style={{ color:"#ee5335", fontWeight:"600" }}>Ather Rizta</span> (family comfort) and switch
               to smarter, cleaner commuting — right here in Medavakkam.
             </p>
 
@@ -361,7 +361,7 @@ const AtherBanner = ({
             {/* Trust strip with SVG icons */}
             <div style={{ ...anim("fadeIn",0.78) }}>
               <div className="hero-trust" style={{ display:"flex", flexWrap:"wrap", gap:"18px",
-                paddingTop:"22px", borderTop:"1px solid rgba(140,198,63,0.2)" }}>
+                paddingTop:"22px", borderTop:"1px solid rgba(238,83,53,0.2)" }}>
                 {trust.map((item, i) => (
                   <div key={i} style={{ display:"flex", alignItems:"center", gap:"8px", whiteSpace:"nowrap" }}>
                     <svg width="14" height="14" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -378,14 +378,14 @@ const AtherBanner = ({
           <div style={{ ...anim("slideUp",0.35) }}>
 
             {/* Tabs */}
-            <div style={{ display:"flex", marginBottom:"20px", borderBottom:"2px solid rgba(140,198,63,0.15)" }}>
+            <div style={{ display:"flex", marginBottom:"20px", borderBottom:"2px solid rgba(238,83,53,0.15)" }}>
               {bikes.map((bike, i) => (
                 <button key={i} className="tab" onClick={() => { setActiveTab(i); setAutoPlay(false); }}
                   style={{
                     flex:1, border:"none",
-                    borderBottom: activeTab === i ? "3px solid #8cc63f" : "3px solid transparent",
-                    background: activeTab === i ? "rgba(140,198,63,0.07)" : "transparent",
-                    color: activeTab === i ? "#3a7d0a" : "#888",
+                    borderBottom: activeTab === i ? "3px solid #ee5335" : "3px solid transparent",
+                    background: activeTab === i ? "rgba(238,83,53,0.07)" : "transparent",
+                    color: activeTab === i ? "#ee5335" : "#888",
                     padding:"12px 16px", marginBottom:"-2px",
                     fontFamily:"'Outfit',sans-serif",
                     fontWeight: activeTab === i ? "800" : "500",
@@ -401,10 +401,10 @@ const AtherBanner = ({
             </div>
 
             {/* Card */}
-            <div style={{ position:"relative", background:"#f8fdf3",
-              border:"1px solid rgba(140,198,63,0.25)", borderRadius:"4px",
+            <div style={{ position:"relative", background:"#ffffff",
+              border:"1px solid rgba(238,83,53,0.25)", borderRadius:"4px",
               padding:"32px 28px 20px", overflow:"hidden",
-              boxShadow:"0 4px 40px rgba(140,198,63,0.08)" }}>
+              boxShadow:"0 4px 40px rgba(238,83,53,0.08)" }}>
 
               {/* Corner accents */}
               {[
@@ -414,19 +414,19 @@ const AtherBanner = ({
                 { bottom:8, right:8, borderBottomWidth:2, borderRightWidth:2  },
               ].map((s, i) => (
                 <div key={i} style={{ position:"absolute", width:"18px", height:"18px",
-                  borderColor:"#8cc63f", borderStyle:"solid", borderWidth:0, ...s }} />
+                  borderColor:"#ee5335", borderStyle:"solid", borderWidth:0, ...s }} />
               ))}
 
               {/* Scan line — switches bike on each completed pass */}
               <div
                 onAnimationIteration={handleScanComplete}
                 style={{ position:"absolute", left:0, right:0, height:"2px", zIndex:2,
-                  background:"linear-gradient(90deg,transparent,rgba(140,198,63,0.5),transparent)",
+                  background:"linear-gradient(90deg,transparent,rgba(238,83,53,0.5),transparent)",
                   animation:"scan 3s linear infinite", top:0 }}
               />
 
               {/* Tag badge with SVG */}
-              <div style={{ display:"inline-flex", alignItems:"center", gap:"6px", background:"#8cc63f", color:"#fff",
+              <div style={{ display:"inline-flex", alignItems:"center", gap:"6px", background:"#ee5335", color:"#fff",
                 padding:"4px 14px", fontSize:"11px", fontWeight:"800", letterSpacing:"0.15em",
                 textTransform:"uppercase", marginBottom:"16px",
                 clipPath:"polygon(8px 0%,100% 0%,calc(100% - 8px) 100%,0% 100%)" }}>
@@ -443,7 +443,7 @@ const AtherBanner = ({
                 {/* Ground glow */}
                 <div style={{ position:"absolute", bottom:"6px", left:"50%",
                   transform:"translateX(-50%)", width:"75%", height:"36px",
-                  background:"radial-gradient(ellipse, rgba(140,198,63,0.3) 0%, transparent 70%)",
+                  background:"radial-gradient(ellipse, rgba(238,83,53,0.3) 0%, transparent 70%)",
                   filter:"blur(10px)" }} />
 
                 {/* DIRECT IMAGE TAG - NO IMPORT NEEDED */}
@@ -459,7 +459,7 @@ const AtherBanner = ({
                       height: "auto",
                       objectFit:"contain",
                       animation:"float 5s ease-in-out infinite, fadeIn 0.5s ease",
-                      filter:"drop-shadow(0 16px 32px rgba(140,198,63,0.22))",
+                      filter:"drop-shadow(0 16px 32px rgba(238,83,53,0.22))",
                       position:"relative",
                       zIndex:1,
                     }}
@@ -474,7 +474,7 @@ const AtherBanner = ({
                     alignItems: "center",
                     justifyContent: "center",
                     background: "#f0fae6",
-                    color: "#8cc63f",
+                    color: "#ee5335",
                     fontSize: "18px",
                     fontWeight: "bold",
                     borderRadius: "8px",
@@ -494,7 +494,7 @@ const AtherBanner = ({
                     {bikes[activeTab].name}
                   </span>
                 </div>
-                <div style={{ color:"#8cc63f", fontSize:"13px", fontWeight:"500", marginTop:"4px" }}>
+                <div style={{ color:"#ee5335", fontSize:"13px", fontWeight:"500", marginTop:"4px" }}>
                   {bikes[activeTab].tagline}
                 </div>
               </div>
@@ -507,16 +507,16 @@ const AtherBanner = ({
                   key={i}
                   className={`indicator-dot${activeTab === i ? " active" : ""}`}
                   onClick={() => { setActiveTab(i); setAutoPlay(false); }}
-                  style={{ background: activeTab === i ? "#8cc63f" : "transparent" }}
+                  style={{ background: activeTab === i ? "#ee5335" : "transparent" }}
                   aria-label={`View ${bikes[i].name}`}
                 />
               ))}
               {/* Resume auto-play if paused */}
               {!autoPlay && (
                 <button onClick={() => setAutoPlay(true)} style={{
-                  background: "none", border: "1px solid rgba(140,198,63,0.4)",
+                  background: "none", border: "1px solid rgba(238,83,53,0.4)",
                   borderRadius: "100px", padding: "2px 10px", fontSize: "10px",
-                  fontWeight: "700", color: "#8cc63f", cursor: "pointer",
+                  fontWeight: "700", color: "#ee5335", cursor: "pointer",
                   fontFamily: "'Outfit',sans-serif", letterSpacing: "0.06em",
                 }}>AUTO</button>
               )}
@@ -529,8 +529,8 @@ const AtherBanner = ({
                 { label:"Smart Connectivity", icon: "wifi-icon" },
                 { label:"Fast Charging",      icon: "bolt-icon" },
               ].map((s, i) => (
-                <div key={i} style={{ background:"rgba(140,198,63,0.07)",
-                  border:"1px solid rgba(140,198,63,0.18)", padding:"12px 10px",
+                <div key={i} style={{ background:"rgba(238,83,53,0.07)",
+                  border:"1px solid rgba(238,83,53,0.18)", padding:"12px 10px",
                   textAlign:"center", borderRadius:"3px" }}>
                   <div style={{ marginBottom:"4px" }}>
                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -547,7 +547,7 @@ const AtherBanner = ({
         </div>
 
         {/* ── ADDRESS FOOTER ── */}
-        <div className="hero-address" style={{ borderTop:"1px solid rgba(140,198,63,0.2)", padding:"16px 0",
+        <div className="hero-address" style={{ borderTop:"1px solid rgba(238,83,53,0.2)", padding:"16px 0",
           display:"flex", alignItems:"center", justifyContent:"center", gap:"8px" }}>
           <svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
             <use href="#location-icon" />

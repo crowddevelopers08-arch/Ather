@@ -22,10 +22,10 @@ export default function ThankYou() {
         <div className="max-w-3xl mx-auto px-4 py-12">
           {/* Success Icon */}
           <div className="text-center mb-10">
-            <div className="w-20 h-20 rounded-full bg-[#f4f8ee] border-4 border-[#8cc63f]/30 flex items-center justify-center mx-auto mb-6">
+            <div className="w-20 h-20 rounded-full bg-[#f4f8ee] border-4 border-[#ee5335]/30 flex items-center justify-center mx-auto mb-6">
               <svg 
                 xmlns="http://www.w3.org/2000/svg" 
-                className="h-10 w-10 text-[#8cc63f]" 
+                className="h-10 w-10 text-[#ee5335]" 
                 fill="none" 
                 viewBox="0 0 24 24" 
                 stroke="currentColor"
@@ -49,7 +49,7 @@ export default function ThankYou() {
           </div>
 
           {/* Contact Info Box */}
-          <div className="bg-[#f4f8ee] rounded-xl p-6 md:p-8 border border-[#8cc63f]/20 mb-10">
+          <div className="bg-[#f4f8ee] rounded-xl p-6 md:p-8 border border-[#ee5335]/20 mb-10">
             <h2 className="text-xl font-bold text-[#111] mb-4">
               For immediate assistance:
             </h2>
@@ -57,7 +57,7 @@ export default function ThankYou() {
               <div>
                 <a 
                   href="tel:+91 98765 43210" 
-                  className="text-2xl md:text-3xl font-bold text-[#8cc63f] hover:text-[#7db535] transition-colors block"
+                  className="text-2xl md:text-3xl font-bold text-[#ee5335] hover:text-[#cc4020] transition-colors block"
                 >
                   +91 98765 43210
                 </a>
@@ -89,7 +89,7 @@ export default function ThankYou() {
             </h3>
             <div className="space-y-4">
               <div className="flex items-start">
-                <div className="w-8 h-8 rounded-full bg-[#8cc63f] text-black flex items-center justify-center font-bold mr-4 mt-1 flex-shrink-0">
+                <div className="w-8 h-8 rounded-full bg-[#ee5335] text-black flex items-center justify-center font-bold mr-4 mt-1 flex-shrink-0">
                   1
                 </div>
                 <div>
@@ -99,7 +99,7 @@ export default function ThankYou() {
               </div>
               
               <div className="flex items-start">
-                <div className="w-8 h-8 rounded-full bg-[#8cc63f] text-black flex items-center justify-center font-bold mr-4 mt-1 flex-shrink-0">
+                <div className="w-8 h-8 rounded-full bg-[#ee5335] text-black flex items-center justify-center font-bold mr-4 mt-1 flex-shrink-0">
                   2
                 </div>
                 <div>
@@ -109,7 +109,7 @@ export default function ThankYou() {
               </div>
               
               <div className="flex items-start">
-                <div className="w-8 h-8 rounded-full bg-[#8cc63f] text-black flex items-center justify-center font-bold mr-4 mt-1 flex-shrink-0">
+                <div className="w-8 h-8 rounded-full bg-[#ee5335] text-black flex items-center justify-center font-bold mr-4 mt-1 flex-shrink-0">
                   3
                 </div>
                 <div>
@@ -119,7 +119,7 @@ export default function ThankYou() {
               </div>
 
               <div className="flex items-start">
-                <div className="w-8 h-8 rounded-full bg-[#8cc63f] text-black flex items-center justify-center font-bold mr-4 mt-1 flex-shrink-0">
+                <div className="w-8 h-8 rounded-full bg-[#ee5335] text-black flex items-center justify-center font-bold mr-4 mt-1 flex-shrink-0">
                   4
                 </div>
                 <div>
@@ -134,32 +134,32 @@ export default function ThankYou() {
           <div className="flex flex-col sm:flex-row gap-4 mb-10">
             <Link 
               href="/" 
-              className="bg-[#8cc63f] hover:bg-[#7db535] text-black font-semibold py-3 px-8 rounded-lg transition-colors text-center shadow-sm"
+              className="bg-[#ee5335] hover:bg-[#cc4020] text-black font-semibold py-3 px-8 rounded-lg transition-colors text-center shadow-sm"
             >
               Return to Homepage
             </Link>
             <a 
               href="tel:+91-98765-43210" 
-              className="border-2 border-[#8cc63f] text-[#8cc63f] hover:bg-[#f4f8ee] font-semibold py-3 px-8 rounded-lg transition-colors text-center"
+              className="border-2 border-[#ee5335] text-[#ee5335] hover:bg-[#f4f8ee] font-semibold py-3 px-8 rounded-lg transition-colors text-center"
             >
               Call Showroom
             </a>
           </div>
 
           {/* Showroom Hours */}
-          <div className="text-center border-t border-[#8cc63f]/20 pt-6">
+          <div className="text-center border-t border-[#ee5335]/20 pt-6">
             <p className="text-[#333]">
               <strong>Showroom Hours:</strong> Mon-Sun: 9:00 AM – 8:00 PM | Open All Days
             </p>
             <div className="flex items-center justify-center gap-2 mt-3">
-              <div className="w-2 h-2 rounded-full bg-[#8cc63f] animate-pulse"></div>
-              <span className="text-[#8cc63f] font-medium text-sm">Store Open Now</span>
+              <div className="w-2 h-2 rounded-full bg-[#ee5335] animate-pulse"></div>
+              <span className="text-[#ee5335] font-medium text-sm">Store Open Now</span>
             </div>
           </div>
         </div>
 
         {/* Footer */}
-        <footer className="bg-white border-t border-[#8cc63f]/20 py-6 px-4">
+        <footer className="bg-white border-t border-[#ee5335]/20 py-6 px-4">
           <div className="max-w-3xl mx-auto text-center">
             <p className="text-[#111] font-medium">
               © 2026 Ather Medavakkam | Authorised Ather Experience Centre
