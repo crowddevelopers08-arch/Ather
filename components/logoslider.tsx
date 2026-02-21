@@ -1,10 +1,98 @@
-import React from "react";
+"use client"
+
+import React, { useState } from "react";
 import { FaMapMarkerAlt, FaPhoneAlt, FaWhatsapp } from "react-icons/fa";
-import Link from "next/link";
+import { toast, Toaster } from "react-hot-toast";
+import { useRouter } from "next/navigation";
 
 const ContactUs = () => {
+  const router = useRouter();
+  const [formData, setFormData] = useState({
+    fullName: "",
+    mobile: "",
+    model: "",
+    datetime: "",
+    landmark: "",
+  });
+  const [isSubmitting, setIsSubmitting] = useState(false);
+
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>) => {
+    const { name, value } = e.target;
+    setFormData(prev => ({ ...prev, [name]: value }));
+  };
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    setIsSubmitting(true);
+
+    try {
+      const response = await fetch('/api/leads', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          name: formData.fullName,
+          phone: formData.mobile,
+          treatment: formData.model, // Map model to treatment field
+          preferredDateTime: formData.datetime,
+          concern: formData.landmark, // Store landmark as concern/note
+          source: window.location.href,
+          formName: "Test Ride Booking Form",
+          consent: true,
+        }),
+      });
+
+      const data = await response.json();
+
+      if (data.success) {
+        // Show success toast
+        toast.success(data.message || "Test ride booked successfully!");
+        
+        // Store lead ID in session storage for thank you page if needed
+        if (data.data?.id) {
+          sessionStorage.setItem('lastBookingId', data.data.id);
+        }
+        
+        // Redirect to thank you page after a short delay
+        setTimeout(() => {
+          router.push('/thank-you');
+        }, 500);
+      } else {
+        toast.error(data.error || "Failed to book test ride");
+        setIsSubmitting(false);
+      }
+    } catch (error) {
+      console.error('Submission error:', error);
+      toast.error("Something went wrong. Please try again.");
+      setIsSubmitting(false);
+    }
+  };
+
   return (
     <div style={{ width: "100%", fontFamily: "'Outfit', sans-serif" }}>
+      <Toaster 
+        position="top-center"
+        toastOptions={{
+          duration: 4000,
+          style: {
+            background: '#333',
+            color: '#fff',
+          },
+          success: {
+            style: {
+              background: '#8cc63f',
+              color: '#000',
+            },
+          },
+          error: {
+            style: {
+              background: '#ff4444',
+              color: '#fff',
+            },
+          },
+        }}
+      />
 
       <style>{`
         /* ── Form inputs ── */
@@ -31,6 +119,10 @@ const ContactUs = () => {
         .ride-input:focus {
           border-color: #8cc63f;
           box-shadow: 0 0 0 3px rgba(140,198,63,0.15), 0 4px 16px rgba(140,198,63,0.1);
+        }
+        .ride-input:disabled {
+          background: #f5f5f5;
+          cursor: not-allowed;
         }
 
         .ride-label {
@@ -66,6 +158,11 @@ const ContactUs = () => {
           white-space: nowrap;
           text-decoration: none;
         }
+        .btn-confirm:disabled {
+          opacity: 0.7;
+          cursor: not-allowed;
+          transform: none !important;
+        }
         .btn-confirm::after {
           content: '';
           position: absolute; inset: 0;
@@ -73,8 +170,8 @@ const ContactUs = () => {
           transform: translateX(-100%);
           transition: transform 0.4s ease;
         }
-        .btn-confirm:hover { background: #7db535; transform: translateY(-2px); box-shadow: 0 10px 32px rgba(140,198,63,0.42); }
-        .btn-confirm:hover::after { transform: translateX(100%); }
+        .btn-confirm:hover:not(:disabled) { background: #7db535; transform: translateY(-2px); box-shadow: 0 10px 32px rgba(140,198,63,0.42); }
+        .btn-confirm:hover:not(:disabled)::after { transform: translateX(100%); }
 
         /* ── Contact icon boxes ── */
         .contact-icon-box {
@@ -118,6 +215,21 @@ const ContactUs = () => {
 
         @keyframes dot-beat { 0%,100%{opacity:1;transform:scale(1)} 50%{opacity:0.4;transform:scale(0.6)} }
         .live-dot { animation: dot-beat 1.6s ease-in-out infinite; }
+
+        /* ── Success message animation ── */
+        @keyframes fadeInUp {
+          from {
+            opacity: 0;
+            transform: translateY(20px);
+          }
+          to {
+            opacity: 1;
+            transform: translateY(0);
+          }
+        }
+        .success-message {
+          animation: fadeInUp 0.5s ease-out;
+        }
 
         /* ── MOBILE RESPONSIVE FIXES ── */
         @media (max-width: 768px) {
@@ -239,7 +351,6 @@ const ContactUs = () => {
 
       {/* ══════════════ TOP FORM SECTION ══════════════ */}
       <div className="contact-form-container" style={{
-        /* Flow: picks up from testimonials' white bottom */
         background: "linear-gradient(180deg, #f4f8ee 0%, #ffffff 16%, #ffffff 100%)",
         borderTop: "1px solid rgba(140,198,63,0.13)",
         padding: "80px 16px 80px",
@@ -248,7 +359,7 @@ const ContactUs = () => {
         overflow: "hidden",
       }}>
 
-        {/* Top accent line — connects from testimonials bottom line */}
+        {/* Top accent line */}
         <div style={{
           position: "absolute", top: 0, left: 0, right: 0, height: "3px",
           background: "linear-gradient(90deg,transparent,#8cc63f 30%,#b5e16a 70%,transparent)",
@@ -284,53 +395,118 @@ const ContactUs = () => {
             and share the best available offer.
           </p>
 
-          {/* ── Form grid ── */}
-          <form action="/api/submit-test-ride" method="POST">
+          {/* ── Form ── */}
+          <form onSubmit={handleSubmit}>
             <div className="contact-form-grid" style={{ display:"grid", gridTemplateColumns:"1fr 1fr", gap:"20px", marginBottom:"28px", textAlign:"left" }}>
 
               <div className="contact-form-field">
                 <label className="ride-label" htmlFor="fullName">Full Name</label>
-                <input type="text" id="fullName" name="fullName" placeholder="Enter your full name" className="ride-input" required />
+                <input 
+                  type="text" 
+                  id="fullName" 
+                  name="fullName" 
+                  value={formData.fullName}
+                  onChange={handleChange}
+                  placeholder="Enter your full name" 
+                  className="ride-input" 
+                  required 
+                  disabled={isSubmitting}
+                />
               </div>
 
               <div className="contact-form-field">
                 <label className="ride-label" htmlFor="mobile">Mobile Number</label>
-                <input type="tel" id="mobile" name="mobile" placeholder="Enter mobile number" className="ride-input" required />
+                <input 
+                  type="tel" 
+                  id="mobile" 
+                  name="mobile" 
+                  value={formData.mobile}
+                  onChange={handleChange}
+                  placeholder="Enter mobile number" 
+                  className="ride-input" 
+                  required 
+                  disabled={isSubmitting}
+                  pattern="[0-9]{10}"
+                  title="Please enter a valid 10-digit mobile number"
+                />
               </div>
 
               <div className="contact-form-field">
                 <label className="ride-label" htmlFor="model">Model Interested In</label>
-                <select id="model" name="model" className="ride-input ride-select" required>
+                <select 
+                  id="model" 
+                  name="model" 
+                  value={formData.model}
+                  onChange={handleChange}
+                  className="ride-input ride-select" 
+                  required
+                  disabled={isSubmitting}
+                >
+                  <option value="">Select Model</option>
                   <option value="ather-450">Ather 450</option>
                   <option value="ather-rizta">Ather Rizta</option>
                 </select>
               </div>
 
               <div className="contact-form-field">
-                <label className="ride-label" htmlFor="datetime">Preferred Date &amp; Time</label>
-                <input type="datetime-local" id="datetime" name="datetime" className="ride-input" required />
+                <label className="ride-label" htmlFor="datetime">Preferred Date & Time</label>
+                <input 
+                  type="datetime-local" 
+                  id="datetime" 
+                  name="datetime" 
+                  value={formData.datetime}
+                  onChange={handleChange}
+                  className="ride-input" 
+                  required 
+                  disabled={isSubmitting}
+                  min={new Date().toISOString().slice(0, 16)}
+                />
               </div>
 
               {/* Full-width landmark field */}
               <div style={{ gridColumn: "1 / -1" }}>
                 <label className="ride-label" htmlFor="landmark">Location / Landmark <span style={{ fontWeight:400, textTransform:"none", letterSpacing:0, color:"#aaa" }}>(optional)</span></label>
-                <input type="text" id="landmark" name="landmark" placeholder="Enter nearby landmark" className="ride-input" />
+                <input 
+                  type="text" 
+                  id="landmark" 
+                  name="landmark" 
+                  value={formData.landmark}
+                  onChange={handleChange}
+                  placeholder="Enter nearby landmark" 
+                  className="ride-input" 
+                  disabled={isSubmitting}
+                />
               </div>
 
             </div>
 
             {/* ── Submit button ── */}
             <div style={{ display:"flex", flexDirection:"column", alignItems:"center", gap:"14px" }}>
-              <button type="submit" className="btn-confirm">
-                Confirm My Test Ride
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
-                  <path d="M5 12h14M12 5l7 7-7 7"/>
-                </svg>
+              <button 
+                type="submit" 
+                className="btn-confirm"
+                disabled={isSubmitting}
+              >
+                {isSubmitting ? (
+                  <>
+                    <svg className="animate-spin" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
+                      <circle cx="12" cy="12" r="10" stroke="currentColor" fill="none" strokeDasharray="32" strokeDashoffset="8" />
+                    </svg>
+                    Booking...
+                  </>
+                ) : (
+                  <>
+                    Confirm My Test Ride
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
+                      <path d="M5 12h14M12 5l7 7-7 7"/>
+                    </svg>
+                  </>
+                )}
               </button>
 
               <p className="contact-agreement" style={{ fontSize:"12px", color:"#aaa", maxWidth:480, lineHeight:1.7 }}>
                 By submitting, you agree to receive calls/WhatsApp updates regarding
-                test rides, pricing &amp; delivery.
+                test rides, pricing & delivery.
               </p>
             </div>
           </form>
@@ -340,7 +516,6 @@ const ContactUs = () => {
 
       {/* ══════════════ BOTTOM SHOWROOM SECTION ══════════════ */}
       <div className="contact-showroom-section" style={{
-        /* Dark premium finish — matches video.tsx CTA card style */
         background: "linear-gradient(125deg, #111111 0%, #1c2a10 50%, #0f1f06 100%)",
         padding: "64px 16px",
         display: "flex",

@@ -12,13 +12,20 @@ model Lead {
   name            String
   phone           String
   email           String?
-  // ISMO specific fields
-  treatment       String?       // QR 678, GFC, PRP, etc.
-  concern         String?       // Hair fall, Bald patches, Thinning, etc.
-  preferredDateTime String?     // User's preferred appointment time
-  source          String?       @default("https://www.ismoskinclinicchennai.in/")
-  formName        String?       @default("Hair Consultation Form")
+  
+  // Lead details
+  treatment       String?       // For Test Ride: ather-450, ather-rizta
+  concern         String?       // For Test Ride: Location/Landmark
+  preferredDateTime String?     // Preferred test ride time
+  
+  // Source tracking
+  source          String?       @default("Website")
+  formName        String?       @default("Test Ride Booking Form")
   consent         Boolean       @default(true)
+  
+  // Location tracking
+  city            String?       // Store city/location
+  state           String?       // Store state
   
   // TeleCRM integration fields
   telecrmSynced   Boolean       @default(false)
@@ -34,10 +41,12 @@ model Lead {
   updatedAt       DateTime      @updatedAt
   syncedAt        DateTime?
 
+  // Indexes for better query performance
   @@index([phone])
   @@index([email])
   @@index([status])
   @@index([createdAt])
+  @@index([formName])
   @@map("leads")
 }
 

@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 
 const reviews = [
   {
-    image: "/testtt2.png",
+    image: "/022te.png",
     text: `Test ride experience was smooth. Explained everything clearly and helped with EMI options.`,
     name: "Customer",
     role: "Medavakkam",
@@ -10,7 +10,7 @@ const reviews = [
     rating: 5,
   },
   {
-    image: "/testtt1.png",
+    image: "/08.png",
     text: `Rizta feels perfect for family use. Delivery process was quick and stress-free.`,
     name: "Customer",
     role: "Velachery Main Road",
@@ -18,7 +18,7 @@ const reviews = [
     rating: 5,
   },
   {
-    image: "/testtt3.png",
+    image: "/0222te.png",
     text: `Best part is the guidance after buying—service and support are responsive.`,
     name: "Customer",
     role: "Chennai",
