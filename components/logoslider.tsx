@@ -599,7 +599,7 @@ const ContactUs = () => {
         }} />
 
         {/* ── Phone (clickable) ── */}
-        <a href="tel:+919876543210" className="contact-card" style={{ maxWidth:200 }}>
+        <a href="tel:+919240083602" className="contact-card" style={{ maxWidth:200 }}>
           <div className="contact-icon-box"><FaPhoneAlt /></div>
           <h4 style={{ 
             fontSize:"11px", 
@@ -616,7 +616,7 @@ const ContactUs = () => {
             fontWeight:800, 
             color:"#fff", 
             margin:"0 0 4px" 
-          }}>+91 98765 43210</p>
+          }}>+91 9240083602</p>
           <p className="contact-hours" style={{ 
             fontSize:"12px", 
             color:"rgba(255,255,255,0.5)", 
@@ -633,7 +633,7 @@ const ContactUs = () => {
         }} />
 
         {/* ── WhatsApp (clickable) ── */}
-        <a href="https://wa.me/919876543210" target="_blank" rel="noopener noreferrer" className="contact-card" style={{ maxWidth:200 }}>
+        <a href="https://wa.me/919240083602" target="_blank" rel="noopener noreferrer" className="contact-card" style={{ maxWidth:200 }}>
           <div className="contact-icon-box"><FaWhatsapp /></div>
           <h4 style={{ 
             fontSize:"11px", 
@@ -650,7 +650,7 @@ const ContactUs = () => {
             fontWeight:800, 
             color:"#fff", 
             margin:"0 0 4px" 
-          }}>+91 98765 43210</p>
+          }}>+91 9240083602</p>
           <p className="contact-hours" style={{ 
             fontSize:"12px", 
             color:"rgba(255,255,255,0.5)", 

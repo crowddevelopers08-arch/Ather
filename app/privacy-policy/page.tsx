@@ -262,10 +262,10 @@ export default function PrivacyPolicy() {
                 <div className="w-6 h-6 rounded-full bg-[#ee5335]/20 flex items-center justify-center mr-3 mt-1 flex-shrink-0">
                   <div className="w-3 h-3 rounded-full bg-[#ee5335]"></div>
                 </div>
-                <div>
-                  <p className="font-semibold text-[#111] mb-1">Address</p>
-                  <p className="text-[#333]">Velachery Main Road, Near Jayachandra, Jayachandran Nagar, Medavakkam, Chennai – 600100</p>
-                </div>
+              <div>
+  <p className="font-semibold text-[#111] mb-1">Address</p>
+  <p className="text-[#333]">Behind Sivandhini Mahal, 7/25, Velachery Rd, Vijayanagaram, Santhosapuram, Medavakkam, Chennai - 600100</p>
+</div>
               </div>
               <div className="flex items-start">
                 <div className="w-6 h-6 rounded-full bg-[#ee5335]/20 flex items-center justify-center mr-3 mt-1 flex-shrink-0">
@@ -273,7 +273,7 @@ export default function PrivacyPolicy() {
                 </div>
                 <div>
                   <p className="font-semibold text-[#111] mb-1">Phone</p>
-                  <p className="text-[#333]">+91 98765 43210</p>
+                  <p className="text-[#333]">+91 9240083602</p>
                 </div>
               </div>
               <div className="flex items-start">
@@ -282,7 +282,7 @@ export default function PrivacyPolicy() {
                 </div>
                 <div>
                   <p className="font-semibold text-[#111] mb-1">WhatsApp</p>
-                  <p className="text-[#333]">+91 98765 43210</p>
+                  <p className="text-[#333]">+91 9240083602</p>
                 </div>
               </div>
               <div className="flex items-start">

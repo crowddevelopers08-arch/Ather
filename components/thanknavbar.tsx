@@ -95,7 +95,7 @@ const ThankNavbar = () => {
             </div>
             
             {/* Call Now button (replaced Book Test Ride) */}
-            <a href="tel:+91-98765-43210" style={{ textDecoration: "none" }}>
+            <a href="tel:+919240083602" style={{ textDecoration: "none" }}>
               <button className="btn-nav" style={{ fontFamily: "'Outfit', sans-serif" }}>
                 <span style={{ display: "flex", alignItems: "center", gap: "6px" }}>
                   <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">

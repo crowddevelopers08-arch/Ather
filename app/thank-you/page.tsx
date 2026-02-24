@@ -56,29 +56,29 @@ export default function ThankYou() {
             <div className="space-y-4">
               <div>
                 <a 
-                  href="tel:+91 98765 43210" 
+                  href="tel:+91 9240083602" 
                   className="text-2xl md:text-3xl font-bold text-[#ee5335] hover:text-[#cc4020] transition-colors block"
                 >
-                  +91 98765 43210
+                  +91 9240083602
                 </a>
                 <p className="text-[#333] text-sm mt-1">
                   Call or WhatsApp for quick responses
                 </p>
               </div>
-              
+{/*               
               <div>
                 <p className="font-medium text-[#111]">Email</p>
                 <p className="text-[#333]">info@athermedavakkam.in</p>
-              </div>
+              </div> */}
               
-              <div>
-                <p className="font-medium text-[#111]">Showroom Address</p>
-                <p className="text-[#333] text-sm">
-                  Velachery Main Road, Near Jayachandra,<br />
-                  Jayachandran Nagar, Medavakkam,<br />
-                  Chennai – 600100
-                </p>
-              </div>
+        <div>
+  <p className="font-medium text-[#111]">Showroom Address</p>
+  <p className="text-[#333] text-sm">
+    Behind Sivandhini Mahal, 7/25, Velachery Rd,<br />
+    Vijayanagaram, Santhosapuram, Medavakkam,<br />
+    Chennai - 600100
+  </p>
+</div>
             </div>
           </div>
 
@@ -139,7 +139,7 @@ export default function ThankYou() {
               Return to Homepage
             </Link>
             <a 
-              href="tel:+91-98765-43210" 
+              href="tel:+919240083602" 
               className="border-2 border-[#ee5335] text-[#ee5335] hover:bg-[#f4f8ee] font-semibold py-3 px-8 rounded-lg transition-colors text-center"
             >
               Call Showroom

@@ -16,12 +16,12 @@ const FooterAther = () => {
     { icon: <FaInstagram />, label: "Instagram", href: "https://instagram.com/athermedavakkam" },
     { icon: <FaYoutube />,   label: "YouTube", href: "https://youtube.com/athermedavakkam" },
     { icon: <FaFacebookF />, label: "Facebook", href: "https://facebook.com/athermedavakkam" },
-    { icon: <FaWhatsapp />,  label: "WhatsApp", href: "https://wa.me/919876543210" },
+    { icon: <FaWhatsapp />,  label: "WhatsApp", href: "https://wa.me/9240083602" },
   ];
 
   const contactLinks = [
-    { icon: <FaPhoneAlt/>, text: "+91 98765 43210", sub: "Call us · 9 AM – 8 PM", href: "tel:+919876543210" },
-    { icon: <FaWhatsapp/>, text: "+91 98765 43210", sub: "WhatsApp · Instant reply", href: "https://wa.me/919876543210" },
+    { icon: <FaPhoneAlt/>, text: "+91 9240083602", sub: "Call us · 9 AM – 8 PM", href: "tel:+919240083602" },
+    { icon: <FaWhatsapp/>, text: "+91 9240083602", sub: "WhatsApp · Instant reply", href: "https://wa.me/919240083602" },
   ];
 
   return (
@@ -303,14 +303,14 @@ const FooterAther = () => {
           </p>
 
           {/* Address block */}
-          <div className="footer-address" style={{ display:"flex", gap:"12px", marginBottom:"28px" }}>
-            <FaMapMarkerAlt style={{ color:"#ee5335", fontSize:15, flexShrink:0, marginTop:3 }} />
-            <p style={{ fontSize:"13px", color:"rgba(255,255,255,0.5)", lineHeight:1.75, margin:0 }}>
-              Velachery Main Road, Near Jayachandra,<br/>
-              Jayachandran Nagar, Medavakkam,<br/>
-              Chennai – 600100
-            </p>
-          </div>
+        <div className="footer-address" style={{ display:"flex", gap:"12px", marginBottom:"28px" }}>
+  <FaMapMarkerAlt style={{ color:"#ee5335", fontSize:15, flexShrink:0, marginTop:3 }} />
+  <p style={{ fontSize:"13px", color:"rgba(255,255,255,0.5)", lineHeight:1.75, margin:0 }}>
+    Behind Sivandhini Mahal, 7/25, Velachery Rd,<br/>
+    Vijayanagaram, Santhosapuram, Medavakkam,<br/>
+    Chennai - 600100
+  </p>
+</div>
 
           {/* Phone & WA with anchor tags */}
           <div className="footer-contact" style={{ display:"flex", flexDirection:"column", gap:"8px", marginBottom:"32px" }}>

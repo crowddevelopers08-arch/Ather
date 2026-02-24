@@ -547,13 +547,13 @@ const AtherBanner = ({
         </div>
 
         {/* ── ADDRESS FOOTER ── */}
-        <div className="hero-address" style={{ borderTop:"1px solid rgba(238,83,53,0.2)", padding:"16px 0",
+      <div className="hero-address" style={{ borderTop:"1px solid rgba(238,83,53,0.2)", padding:"16px 0",
           display:"flex", alignItems:"center", justifyContent:"center", gap:"8px" }}>
           <svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
             <use href="#location-icon" />
           </svg>
           <span style={{ color:"#777", fontSize:"13px", fontWeight:"400", letterSpacing:"0.02em" }}>
-            Velachery Main Road, Near Jayachandra, Jayachandran Nagar, Medavakkam, Chennai – 600100
+            Behind Sivandhini Mahal, 7/25, Velachery Rd, Vijayanagaram, Santhosapuram, Medavakkam, Chennai - 600100
           </span>
         </div>
       </div>
