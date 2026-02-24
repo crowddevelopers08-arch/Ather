@@ -13,9 +13,9 @@ const FooterAther = () => {
   ];
 
   const socials = [
-    { icon: <FaInstagram />, label: "Instagram", href: "https://instagram.com/athermedavakkam" },
-    { icon: <FaYoutube />,   label: "YouTube", href: "https://youtube.com/athermedavakkam" },
-    { icon: <FaFacebookF />, label: "Facebook", href: "https://facebook.com/athermedavakkam" },
+    { icon: <FaInstagram />, label: "Instagram", href: "https://www.instagram.com/ather.chennaikuttukaran/" },
+    // { icon: <FaYoutube />,   label: "YouTube", href: "https://youtube.com/athermedavakkam" },
+    { icon: <FaFacebookF />, label: "Facebook", href: "https://www.facebook.com/profile.php?id=61587464942819" },
     { icon: <FaWhatsapp />,  label: "WhatsApp", href: "https://wa.me/9240083602" },
   ];
 
